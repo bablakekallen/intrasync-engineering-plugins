@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GEO OPTIMIZATION: Enhanced Title & Meta Description -->
+    <title>DesignLogic - Engineering Plugins for Precast Design Tools | IntraSync Industrial</title>
+    <meta name="description" content="Engineering plugins for Revit, Tekla, Allplan, AutoCAD, Bentley, and SketchUp. Connect precast design tools directly to your ERP with automated BIM-to-production workflows, shop drawing generation, and real-time sync.">
+
+    <!-- GEO OPTIMIZATION: Canonical URL -->
+    <link rel="canonical" href="https://designlogic.intrasyncindustrial.com/">
+
+    <!-- GEO OPTIMIZATION: Open Graph Tags -->
+    <meta property="og:title" content="DesignLogic - Engineering Plugins for Precast Design Tools">
+    <meta property="og:description" content="Connect Revit, Tekla, Allplan, and AutoCAD directly to your precast ERP. Automated BIM-to-production workflows with real-time sync.">
+    <meta property="og:image" content="https://designlogic.intrasyncindustrial.com/logo.svg">
+    <meta property="og:url" content="https://designlogic.intrasyncindustrial.com/">
+    <meta property="og:type" content="website">
+
+    <!-- GEO OPTIMIZATION: Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DesignLogic - Precast Design Tool Plugins">
+    <meta name="twitter:description" content="Engineering plugins that connect BIM/CAD tools to your precast ERP. Revit, Tekla, Allplan, AutoCAD, Bentley, and SketchUp.">
+    <meta name="twitter:image" content="https://designlogic.intrasyncindustrial.com/logo.svg">
+
+    <!-- GEO OPTIMIZATION: Keywords -->
+    <meta name="keywords" content="precast design plugins, Revit precast plugin, Tekla precast, BIM to production, precast shop drawings, engineering plugins, precast BIM, IFC precast, AutoCAD precast, Allplan precast, design to ERP integration">
+    <meta name="author" content="IntraSync Industrial">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- GEO OPTIMIZATION: Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "IntraSync Industrial",
+      "url": "https://intrasyncindustrial.com",
+      "logo": "https://designlogic.intrasyncindustrial.com/logo.svg",
+      "description": "Leading provider of engineering plugins and ERP software for the precast concrete industry",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1401 21st Street Suite R",
+        "addressLocality": "Sacramento",
+        "addressRegion": "CA",
+        "postalCode": "95811",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-707-640-1380",
+        "contactType": "Sales",
+        "email": "info@intrasyncindustrial.com",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
+
+    <!-- GEO OPTIMIZATION: SoftwareApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "DesignLogic",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Engineering Design Plugins",
+      "operatingSystem": "Windows",
+      "description": "Engineering plugins that integrate popular BIM/CAD design tools with the IntraSync ERP ecosystem. Supports Autodesk Revit, Tekla Structures, Allplan, AutoCAD, Bentley ProStructures, and SketchUp for automated BIM-to-production workflows in precast concrete manufacturing.",
+      "provider": {
+        "@type": "Organization",
+        "name": "IntraSync Industrial"
+      },
+      "featureList": [
+        "Autodesk Revit Plugin",
+        "Tekla Structures Plugin",
+        "Allplan Plugin",
+        "AutoCAD Plugin",
+        "Bentley ProStructures Plugin",
+        "SketchUp Plugin",
+        "BIM-to-Production Pipeline",
+        "Automated Shop Drawings",
+        "IFC 4.0 Support",
+        "Real-Time ERP Sync"
+      ]
+    }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(to right, #059669, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+        }
+        .module-card {
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(5, 150, 105, 0.1), 0 10px 10px -5px rgba(5, 150, 105, 0.04);
+            border-color: #059669;
+        }
+        .feature-icon {
+            background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+            border-radius: 12px;
+            padding: 12px;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-emerald-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center" aria-label="IntraSync DesignLogic Home">
+                <img src="logo.svg" alt="DesignLogic Logo" class="h-12 mr-3">
+                <span class="text-2xl font-bold gradient-text">DesignLogic</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Home</a>
+                <a href="#plugins" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Plugins</a>
+                <a href="#plugins" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Revit</a>
+                <a href="#plugins" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Tekla</a>
+                <a href="blog.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Blog</a>
+                <a href="about.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">About</a>
+                <a href="contact.html" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold px-6 py-2.5 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all transform hover:scale-105 shadow-lg">Request Demo</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden flex items-center text-gray-600 hover:text-emerald-600" aria-label="Toggle mobile menu">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-emerald-100 px-6 py-4 space-y-3">
+            <a href="index.html" class="block text-gray-600 hover:text-emerald-600 font-medium py-2">Home</a>
+            <a href="#plugins" class="block text-gray-600 hover:text-emerald-600 font-medium py-2">Plugins</a>
+            <a href="#plugins" class="block text-gray-600 hover:text-emerald-600 font-medium py-2">Revit</a>
+            <a href="#plugins" class="block text-gray-600 hover:text-emerald-600 font-medium py-2">Tekla</a>
+            <a href="blog.html" class="block text-gray-600 hover:text-emerald-600 font-medium py-2">Blog</a>
+            <a href="about.html" class="block text-gray-600 hover:text-emerald-600 font-medium py-2">About</a>
+            <a href="contact.html" class="block bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold px-6 py-2.5 rounded-lg text-center mt-2">Request Demo</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg py-24 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight">
+                    Engineering Plugins for <span class="gradient-text">Precast Design Tools</span>
+                </h1>
+                <p class="mt-6 text-xl md:text-2xl font-semibold text-gray-800">
+                    Revit &bull; Tekla &bull; Allplan &bull; AutoCAD &bull; Bentley &bull; SketchUp
+                </p>
+                <p class="mt-6 max-w-4xl mx-auto text-lg md:text-xl text-gray-700 leading-relaxed">
+                    DesignLogic connects your favorite design and BIM tools directly to the IntraSync ERP ecosystem. Extract piece data from 3D models, generate production-ready shop drawings, and sync everything to CastLogic in real time. Zero manual entry, zero data gaps.
+                </p>
+                <div class="mt-12 flex flex-wrap justify-center items-center gap-4">
+                    <a href="#contact" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-bold px-10 py-5 rounded-lg text-lg hover:from-emerald-600 hover:to-emerald-700 transition-all transform hover:scale-105 shadow-xl">Request Demo</a>
+                    <a href="#plugins" class="bg-white text-emerald-600 font-bold px-10 py-5 rounded-lg text-lg hover:bg-emerald-50 transition-all transform hover:scale-105 border-2 border-emerald-300 shadow-xl">Explore Plugins</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Supported Design Tools -->
+        <section id="plugins" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Supported Design Platforms</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Purpose-built plugins for the tools your engineering team already uses every day</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <article class="module-card text-center">
+                        <div class="feature-icon w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                            <i data-lucide="pen-tool" class="w-8 h-8 text-white" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Autodesk Revit</h3>
+                        <p class="text-gray-600 leading-relaxed">BIM modeling plugin for precast families, automated piece extraction, and production drawing export. Full parametric family support with one-click ERP sync.</p>
+                        <a href="#contact" class="inline-block mt-4 text-emerald-600 font-semibold hover:text-emerald-700">Learn More &rarr;</a>
+                    </article>
+
+                    <article class="module-card text-center">
+                        <div class="feature-icon w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                            <i data-lucide="ruler" class="w-8 h-8 text-white" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Tekla Structures</h3>
+                        <p class="text-gray-600 leading-relaxed">Structural detailing plugin for precast connections, rebar and strand detailing, and IFC export. Automatic connection library with production-ready output.</p>
+                        <a href="#contact" class="inline-block mt-4 text-emerald-600 font-semibold hover:text-emerald-700">Learn More &rarr;</a>
+                    </article>
+
+                    <article class="module-card text-center">
+                        <div class="feature-icon w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                            <i data-lucide="layers" class="w-8 h-8 text-white" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Allplan</h3>
+                        <p class="text-gray-600 leading-relaxed">BIM/CAD plugin for precast wall and floor systems, automated piece lists, and production scheduling integration. Full Allplan Precast workflow support.</p>
+                        <a href="#contact" class="inline-block mt-4 text-emerald-600 font-semibold hover:text-emerald-700">Learn More &rarr;</a>
+                    </article>
+
+                    <article class="module-card text-center">
+                        <div class="feature-icon w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                            <i data-lucide="pencil-ruler" class="w-8 h-8 text-white" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">AutoCAD</h3>
+                        <p class="text-gray-600 leading-relaxed">2D/3D drafting plugin for precast shop drawings, DWG-to-ERP piece data extraction, and automated dimensioning with mark number generation.</p>
+                        <a href="#contact" class="inline-block mt-4 text-emerald-600 font-semibold hover:text-emerald-700">Learn More &rarr;</a>
+                    </article>
+
+                    <article class="module-card text-center">
+                        <div class="feature-icon w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                            <i data-lucide="building" class="w-8 h-8 text-white" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Bentley ProStructures</h3>
+                        <p class="text-gray-600 leading-relaxed">Structural modeling plugin for precast frame design and engineering analysis. Extract load data, connection details, and piece geometry directly to ERP.</p>
+                        <a href="#contact" class="inline-block mt-4 text-emerald-600 font-semibold hover:text-emerald-700">Learn More &rarr;</a>
+                    </article>
+
+                    <article class="module-card text-center">
+                        <div class="feature-icon w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                            <i data-lucide="box" class="w-8 h-8 text-white" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">SketchUp</h3>
+                        <p class="text-gray-600 leading-relaxed">3D visualization plugin for precast project proposals and client presentations. Generate accurate piece counts and preliminary estimates from concept models.</p>
+                        <a href="#contact" class="inline-block mt-4 text-emerald-600 font-semibold hover:text-emerald-700">Learn More &rarr;</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Capabilities -->
+        <section id="features" class="py-24 bg-gradient-to-br from-emerald-50 to-green-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">Key Capabilities</h2>
+                    <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
+                        Everything you need to bridge the gap between design and production in precast manufacturing
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                    <article class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="workflow" class="w-10 h-10 text-emerald-600" aria-hidden="true"></i>
+                            <h3 class="text-xl font-bold text-gray-900">BIM-to-Production Pipeline</h3>
+                        </div>
+                        <p class="text-gray-600">Extract piece data from 3D models directly into CastLogic ERP. Automated piece marks, dimensions, weights, and material specifications flow seamlessly from design to production.</p>
+                    </article>
+
+                    <article class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="file-output" class="w-10 h-10 text-emerald-600" aria-hidden="true"></i>
+                            <h3 class="text-xl font-bold text-gray-900">Automated Shop Drawings</h3>
+                        </div>
+                        <p class="text-gray-600">Generate production-ready shop drawings from BIM models with automatic dimensioning, section views, and detail callouts. Reduce drafting time by up to 80%.</p>
+                    </article>
+
+                    <article class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="grid-3x3" class="w-10 h-10 text-emerald-600" aria-hidden="true"></i>
+                            <h3 class="text-xl font-bold text-gray-900">Rebar & Strand Detailing</h3>
+                        </div>
+                        <p class="text-gray-600">Automatic reinforcement detailing with bar lists, strand patterns, and embed placement. Complete rebar schedules generated from 3D model data.</p>
+                    </article>
+
+                    <article class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="package-search" class="w-10 h-10 text-emerald-600" aria-hidden="true"></i>
+                            <h3 class="text-xl font-bold text-gray-900">Piece Tracking Integration</h3>
+                        </div>
+                        <p class="text-gray-600">Every piece from design flows into production scheduling, yard management, and delivery tracking. Full lifecycle visibility from model to jobsite.</p>
+                    </article>
+
+                    <article class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="file-code" class="w-10 h-10 text-emerald-600" aria-hidden="true"></i>
+                            <h3 class="text-xl font-bold text-gray-900">IFC & openBIM Support</h3>
+                        </div>
+                        <p class="text-gray-600">Full IFC 4.0 support for open standards interoperability. Exchange precast data with any IFC-compliant platform without vendor lock-in.</p>
+                    </article>
+
+                    <article class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="refresh-cw" class="w-10 h-10 text-emerald-600" aria-hidden="true"></i>
+                            <h3 class="text-xl font-bold text-gray-900">Real-Time Sync</h3>
+                        </div>
+                        <p class="text-gray-600">Live bidirectional sync between design tools and ERP. Design changes propagate to production instantly, and production status reflects back in the model.</p>
+                    </article>
+
+                    <article class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="link" class="w-10 h-10 text-emerald-600" aria-hidden="true"></i>
+                            <h3 class="text-xl font-bold text-gray-900">Precast Connection Library</h3>
+                        </div>
+                        <p class="text-gray-600">Pre-built connection details for common precast joints including corbels, dowels, weld plates, and bearing pads. PCI-compliant standard details ready to use.</p>
+                    </article>
+
+                    <article class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="calculator" class="w-10 h-10 text-emerald-600" aria-hidden="true"></i>
+                            <h3 class="text-xl font-bold text-gray-900">Weight & Volume Calculator</h3>
+                        </div>
+                        <p class="text-gray-600">Automatic weight and volume calculations from 3D geometry. Accurate concrete quantities, lifting weights, and transport loads computed in real time.</p>
+                    </article>
+
+                    <article class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="users" class="w-10 h-10 text-emerald-600" aria-hidden="true"></i>
+                            <h3 class="text-xl font-bold text-gray-900">Multi-User Collaboration</h3>
+                        </div>
+                        <p class="text-gray-600">Multiple engineers work simultaneously on the same project with automatic conflict resolution. Real-time status updates and change notifications across the team.</p>
+                    </article>
+                </div>
+
+                <div class="text-center mt-16">
+                    <a href="#contact" class="inline-block bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-bold px-10 py-5 rounded-lg text-lg hover:from-emerald-600 hover:to-emerald-700 transition-all transform hover:scale-105 shadow-xl">View All Features</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                    <div class="stat-card text-white p-8 rounded-xl text-center">
+                        <div class="text-4xl font-bold mb-2">6+</div>
+                        <div class="text-emerald-200">Design Platforms</div>
+                    </div>
+                    <div class="stat-card text-white p-8 rounded-xl text-center">
+                        <div class="text-4xl font-bold mb-2">100%</div>
+                        <div class="text-emerald-200">IFC Compliant</div>
+                    </div>
+                    <div class="stat-card text-white p-8 rounded-xl text-center">
+                        <div class="text-4xl font-bold mb-2">2-Way</div>
+                        <div class="text-emerald-200">Live Sync</div>
+                    </div>
+                    <div class="stat-card text-white p-8 rounded-xl text-center">
+                        <div class="text-4xl font-bold mb-2">Zero</div>
+                        <div class="text-emerald-200">Manual Entry</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IntraSync Integration Section -->
+        <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <div class="flex justify-center items-center gap-4 mb-4">
+                        <i data-lucide="puzzle" class="w-12 h-12"></i>
+                        <h2 class="text-4xl font-extrabold">Part of IntraSync Industrial</h2>
+                    </div>
+                    <p class="text-xl text-blue-100 max-w-3xl mx-auto">DesignLogic seamlessly integrates with the complete IntraSync Industrial ecosystem for end-to-end precast concrete management.</p>
+                </div>
+                <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-white/10 rounded-xl p-6 text-center">
+                        <h3 class="font-bold text-xl mb-2">CastLogic ERP</h3>
+                        <p class="text-blue-100 text-sm">Full ERP for precast manufacturers with project accounting, production planning, and Verify QC module.</p>
+                        <a href="https://intrasyncindustrial.com" class="inline-block mt-4 text-white font-semibold hover:underline">Learn More &rarr;</a>
+                    </div>
+                    <div class="bg-white/10 rounded-xl p-6 text-center">
+                        <h3 class="font-bold text-xl mb-2">BatchLogic</h3>
+                        <p class="text-blue-100 text-sm">Advanced batch plant control with universal equipment integration and AI-powered automation.</p>
+                        <a href="https://batchlogic.intrasyncindustrial.com" class="inline-block mt-4 text-white font-semibold hover:underline">Learn More &rarr;</a>
+                    </div>
+                    <div class="bg-white/10 rounded-xl p-6 text-center">
+                        <h3 class="font-bold text-xl mb-2">MaterialsLogic</h3>
+                        <p class="text-blue-100 text-sm">AI-powered material management for aggregates, cement, asphalt, and admixtures with drone scanning.</p>
+                        <a href="https://materialslogic.intrasyncindustrial.com" class="inline-block mt-4 text-white font-semibold hover:underline">Learn More &rarr;</a>
+                    </div>
+                    <div class="bg-white/10 rounded-xl p-6 text-center border-2 border-white/30">
+                        <h3 class="font-bold text-xl mb-2">DesignLogic</h3>
+                        <p class="text-blue-100 text-sm">Engineering plugins for Revit, Tekla, Allplan, and more. BIM-to-production workflows with real-time ERP sync.</p>
+                        <span class="inline-block mt-4 text-white font-semibold">You are here</span>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="https://intrasyncindustrial.com" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition">Explore IntraSync Industrial &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why DesignLogic Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Why Choose DesignLogic?</h2>
+                    <p class="text-xl text-gray-600">Purpose-built plugins that bridge the gap between design and production</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="text-emerald-500 mb-4"><i data-lucide="zap" class="w-10 h-10"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Eliminate Re-Entry</h3>
+                        <p class="text-gray-700">Stop re-keying piece data from drawings into your ERP. DesignLogic extracts every dimension, weight, and specification directly from the 3D model with zero manual effort.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="text-emerald-500 mb-4"><i data-lucide="clock" class="w-10 h-10"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Faster Project Turnaround</h3>
+                        <p class="text-gray-700">Cut engineering time by automating shop drawing generation, rebar scheduling, and piece list creation. Projects move from design to production in days, not weeks.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="text-emerald-500 mb-4"><i data-lucide="shield-check" class="w-10 h-10"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Single Source of Truth</h3>
+                        <p class="text-gray-700">Every piece in your ERP traces back to the 3D model. Design revisions automatically update production data, eliminating version conflicts and costly errors.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">Get Started with DesignLogic</h2>
+                    <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
+                        See how DesignLogic plugins integrate with your design tools. Our team will provide a personalized demo tailored to your platform and workflow.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto items-start">
+                    <div class="bg-gradient-to-br from-gray-50 to-emerald-50 p-8 md:p-10 rounded-lg shadow-2xl border border-emerald-200">
+                        <h3 class="text-2xl font-bold mb-6">Request a Demo</h3>
+                        <form action="https://formspree.io/f/meoknpor" method="POST" class="space-y-6">
+                            <input type="hidden" name="product" value="DesignLogic">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 border focus:border-emerald-500 focus:ring-emerald-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Work Email</label>
+                                <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 border focus:border-emerald-500 focus:ring-emerald-500">
+                            </div>
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-gray-700">Company Name</label>
+                                <input type="text" name="company" id="company" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 border focus:border-emerald-500 focus:ring-emerald-500">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                                <input type="tel" name="phone" id="phone" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 border focus:border-emerald-500 focus:ring-emerald-500">
+                            </div>
+                            <div>
+                                <label for="design_tool" class="block text-sm font-medium text-gray-700">Primary Design Tool</label>
+                                <select name="design_tool" id="design_tool" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 border focus:border-emerald-500 focus:ring-emerald-500">
+                                    <option value="">Select your design tool</option>
+                                    <option value="Autodesk Revit">Autodesk Revit</option>
+                                    <option value="Tekla Structures">Tekla Structures</option>
+                                    <option value="Allplan">Allplan</option>
+                                    <option value="AutoCAD">AutoCAD</option>
+                                    <option value="Bentley ProStructures">Bentley ProStructures</option>
+                                    <option value="SketchUp">SketchUp</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Tell us about your workflow</label>
+                                <textarea id="message" name="message" rows="4" placeholder="What design tools are you using and what does your current design-to-production workflow look like?" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 border focus:border-emerald-500 focus:ring-emerald-500"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full justify-center rounded-md border border-transparent bg-gradient-to-r from-emerald-500 to-emerald-600 py-4 px-4 text-base font-bold text-white shadow-lg hover:from-emerald-600 hover:to-emerald-700 transition-all">Schedule Demo</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="pt-8 space-y-10">
+                        <div class="flex items-start">
+                            <i data-lucide="mail" class="w-8 h-8 text-emerald-600 mr-6 mt-1 flex-shrink-0" aria-hidden="true"></i>
+                            <div>
+                                <h4 class="text-lg font-semibold">Email Us</h4>
+                                <p class="text-gray-600 leading-relaxed">Get plugin specs, compatibility details, and pricing.</p>
+                                <a href="mailto:info@intrasyncindustrial.com" class="text-emerald-600 font-semibold hover:underline">info@intrasyncindustrial.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="phone" class="w-8 h-8 text-emerald-600 mr-6 mt-1 flex-shrink-0" aria-hidden="true"></i>
+                            <div>
+                                <h4 class="text-lg font-semibold">Call Us</h4>
+                                <p class="text-gray-600 leading-relaxed">Speak with a DesignLogic integration specialist.</p>
+                                <a href="tel:+17076401380" class="text-emerald-600 font-semibold hover:underline">(707) 640-1380</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="map-pin" class="w-8 h-8 text-emerald-600 mr-6 mt-1 flex-shrink-0" aria-hidden="true"></i>
+                            <div>
+                                <h4 class="text-lg font-semibold">Visit Us</h4>
+                                <address class="text-gray-600 leading-relaxed not-italic">
+                                    1401 21st Street Suite R,<br>
+                                    Sacramento, CA 95811
+                                </address>
+                            </div>
+                        </div>
+                        <div class="bg-emerald-50 p-6 rounded-lg border border-emerald-200">
+                            <h4 class="font-bold text-gray-900 mb-2">Plugin Compatibility Check</h4>
+                            <p class="text-gray-600 mb-4">Not sure if your design tool version is supported? Our engineering team will verify compatibility and provide a migration plan.</p>
+                            <a href="#contact" class="text-emerald-600 font-semibold hover:underline">Check Compatibility &rarr;</a>
+                        </div>
+                        <div class="bg-emerald-50 p-6 rounded-lg border border-emerald-200">
+                            <h4 class="font-bold text-gray-900 mb-2">Free Pilot Program</h4>
+                            <p class="text-gray-600">Try DesignLogic on a real project before committing. We handle setup, training, and support during the pilot.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="logo.svg" alt="DesignLogic Logo" class="h-10 mr-3">
+                        <span class="text-xl font-bold gradient-text">DesignLogic</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">Engineering plugins that connect precast design tools to the IntraSync ERP ecosystem.</p>
+                    <address class="mt-4 text-gray-400 not-italic">
+                        <p>1401 21st Street Suite R<br>Sacramento, CA 95811</p>
+                        <p class="mt-2"><a href="tel:+17076401380" class="hover:text-white">(707) 640-1380</a></p>
+                    </address>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 tracking-wider uppercase text-gray-400">Plugins</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#plugins" class="text-gray-300 hover:text-white">All Plugins</a></li>
+                        <li><a href="#plugins" class="text-gray-300 hover:text-white">Revit</a></li>
+                        <li><a href="#plugins" class="text-gray-300 hover:text-white">Tekla</a></li>
+                        <li><a href="#plugins" class="text-gray-300 hover:text-white">Allplan</a></li>
+                        <li><a href="#plugins" class="text-gray-300 hover:text-white">AutoCAD</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 tracking-wider uppercase text-gray-400">ERP Modules</h4>
+                    <ul class="space-y-3">
+                        <li><a href="accounting.html" class="text-gray-300 hover:text-white">Accounting</a></li>
+                        <li><a href="hr.html" class="text-gray-300 hover:text-white">HR & Payroll</a></li>
+                        <li><a href="dispatch.html" class="text-gray-300 hover:text-white">Dispatch</a></li>
+                        <li><a href="schedule.html" class="text-gray-300 hover:text-white">Scheduling</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 tracking-wider uppercase text-gray-400">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="faq.html" class="text-gray-300 hover:text-white">FAQ</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                        <li><a href="privacy.html" class="text-gray-300 hover:text-white">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- IntraSync Product Family -->
+            <div class="mt-12 border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                    <span class="text-gray-400 text-sm">Also from IntraSync:</span>
+                    <div class="flex items-center gap-6">
+                        <a href="https://intrasyncindustrial.com" class="text-gray-300 hover:text-purple-400 transition flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                            <span>CastLogic</span>
+                            <span class="text-gray-500 text-sm">Precast ERP</span>
+                        </a>
+                        <span class="text-gray-600">|</span>
+                        <a href="https://batchlogic.intrasyncindustrial.com" class="text-gray-300 hover:text-cyan-400 transition flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                            <span>BatchLogic</span>
+                            <span class="text-gray-500 text-sm">Batch Control</span>
+                        </a>
+                        <span class="text-gray-600">|</span>
+                        <a href="https://materialslogic.intrasyncindustrial.com" class="text-gray-300 hover:text-amber-400 transition flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+                            <span>MaterialsLogic</span>
+                            <span class="text-gray-500 text-sm">Aggregates ERP</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 IntraSync Industrial. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

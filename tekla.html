@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tekla Structures Plugin for Precast Detailing | DesignLogic by IntraSync</title>
+    <meta name="description" content="The definitive Tekla Structures integration for precast concrete. Complete connection detailing, reinforcement automation, and direct CastLogic ERP export.">
+    <link rel="canonical" href="https://designlogic.intrasyncindustrial.com/tekla.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://designlogic.intrasyncindustrial.com/tekla.html">
+    <meta property="og:title" content="Tekla Structures Plugin for Precast Detailing | DesignLogic">
+    <meta property="og:description" content="Precision detailing meets production automation. The definitive Tekla integration for precast concrete.">
+    <meta property="og:site_name" content="IntraSync DesignLogic">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .animate-fadeInUp { animation: fadeInUp 0.8s ease-out forwards; }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .module-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .module-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .feature-icon { transition: transform 0.3s ease; }
+        .feature-card:hover .feature-icon { transform: scale(1.1) rotate(5deg); }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-emerald-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="logo.svg" alt="DesignLogic Logo" class="h-12 mr-3">
+                <span class="text-2xl font-bold gradient-text">DesignLogic</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Home</a>
+                <a href="plugins.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Plugins</a>
+                <a href="revit.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Revit</a>
+                <a href="tekla.html" class="text-emerald-600 font-semibold border-b-2 border-emerald-600 pb-1">Tekla</a>
+                <a href="blog.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Blog</a>
+                <a href="about.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">About</a>
+                <a href="contact.html" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold px-6 py-2.5 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all transform hover:scale-105 shadow-lg">Request Demo</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 py-20 md:py-28">
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute top-20 right-10 w-72 h-72 bg-emerald-500 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-20 left-10 w-96 h-96 bg-teal-500 rounded-full blur-3xl"></div>
+            </div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl mx-auto text-center animate-fadeInUp">
+                    <div class="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        Trimble Tekla Structures Integration
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+                        Tekla Structures Plugin for <span class="gradient-text">Precast Detailing</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto">
+                        Precision detailing meets production automation. The definitive Tekla integration for precast concrete.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="contact.html" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-emerald-600 hover:to-emerald-700 hover:shadow-xl transition-all transform hover:scale-105 shadow-lg">
+                            Download Plugin
+                        </a>
+                        <a href="#demo" class="bg-white border-2 border-emerald-300 text-emerald-700 px-8 py-4 rounded-lg font-bold text-lg hover:border-emerald-500 hover:bg-emerald-50 transition-all">
+                            <span class="flex items-center justify-center gap-2">
+                                <i data-lucide="play-circle" class="w-5 h-5"></i>
+                                Watch Demo
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Integration Points -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold mb-4">Key Integration Points</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Three capabilities that make DesignLogic the standard for precast detailing in Tekla Structures.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Card 1 -->
+                    <div class="module-card feature-card bg-white rounded-xl shadow-lg p-8 border border-emerald-100">
+                        <div class="feature-icon w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-5">
+                            <i data-lucide="link" class="w-8 h-8 text-emerald-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Connection Detailing</h3>
+                        <p class="text-gray-600">Complete library of precast connection types with built-in engineering calculations per the PCI Design Handbook. Wet joints, dry joints, and everything in between.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="module-card feature-card bg-white rounded-xl shadow-lg p-8 border border-emerald-100">
+                        <div class="feature-icon w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-5">
+                            <i data-lucide="git-branch" class="w-8 h-8 text-emerald-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Rebar & Strand</h3>
+                        <p class="text-gray-600">Automatic reinforcement detailing with ACI-standard bend schedules, prestressing strand patterns, and support for GFRP and specialty reinforcement.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="module-card feature-card bg-white rounded-xl shadow-lg p-8 border border-emerald-100">
+                        <div class="feature-icon w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-5">
+                            <i data-lucide="share-2" class="w-8 h-8 text-emerald-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">IFC Export</h3>
+                        <p class="text-gray-600">Full IFC 4.0 export with precast-specific property sets. Share models with contractors, engineers, and owners with complete data fidelity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section 1: Precast Connection Library -->
+        <section class="py-20 bg-gradient-to-br from-emerald-50 to-green-50">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+                    <div>
+                        <div class="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-bold mb-4">CONNECTIONS</div>
+                        <h2 class="text-4xl font-extrabold mb-6">Precast Connection Library</h2>
+                        <p class="text-lg text-gray-600 mb-8">Every connection type your precast operation needs, pre-built with engineering calculations per PCI standards. Select, configure, and place -- the math is already done.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Wet and dry connection types</strong> including grouted pockets, welded connections, bolted assemblies, and cast-in anchors</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Bearing pad details</strong> with load calculations, material specifications, and placement tolerances</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Weld plates and hardware connections</strong> with capacity checks, weld sizing, and anchor bolt verification</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Corbel and haunch designs</strong> with shear friction, flexure, and bearing capacity calculations</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Moment-resisting connections</strong> for seismic and lateral force resistance per code requirements</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Engineering calculations per PCI Design Handbook</strong> -- automatically generated and documented for each connection</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-white rounded-2xl shadow-2xl p-8 border border-emerald-200">
+                            <div class="flex items-center gap-2 mb-6">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                <span class="ml-3 text-sm text-gray-400 font-medium">Connection Library</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3 flex items-center gap-3">
+                                    <i data-lucide="plug" class="w-5 h-5 text-emerald-600"></i>
+                                    <div>
+                                        <span class="text-sm font-medium text-gray-700">Welded Plate Connection</span>
+                                        <div class="text-xs text-gray-500">Capacity: 45 kips | PCI 6.16</div>
+                                    </div>
+                                    <span class="ml-auto text-xs bg-green-100 text-green-700 px-2 py-1 rounded">OK</span>
+                                </div>
+                                <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3 flex items-center gap-3">
+                                    <i data-lucide="plug" class="w-5 h-5 text-emerald-600"></i>
+                                    <div>
+                                        <span class="text-sm font-medium text-gray-700">Dapped End Bearing</span>
+                                        <div class="text-xs text-gray-500">Capacity: 62 kips | PCI 5.6</div>
+                                    </div>
+                                    <span class="ml-auto text-xs bg-green-100 text-green-700 px-2 py-1 rounded">OK</span>
+                                </div>
+                                <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3 flex items-center gap-3">
+                                    <i data-lucide="plug" class="w-5 h-5 text-emerald-600"></i>
+                                    <div>
+                                        <span class="text-sm font-medium text-gray-700">Grouted Pocket</span>
+                                        <div class="text-xs text-gray-500">Capacity: 28 kips | PCI 6.9</div>
+                                    </div>
+                                    <span class="ml-auto text-xs bg-green-100 text-green-700 px-2 py-1 rounded">OK</span>
+                                </div>
+                                <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3 flex items-center gap-3">
+                                    <i data-lucide="plug" class="w-5 h-5 text-emerald-600"></i>
+                                    <div>
+                                        <span class="text-sm font-medium text-gray-700">Corbel - Monolithic</span>
+                                        <div class="text-xs text-gray-500">Capacity: 90 kips | PCI 5.9</div>
+                                    </div>
+                                    <span class="ml-auto text-xs bg-green-100 text-green-700 px-2 py-1 rounded">OK</span>
+                                </div>
+                                <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 text-center text-sm text-gray-500">
+                                    + 85 more connection types
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section 2: Reinforcement Detailing -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+                    <div class="md:order-2">
+                        <div class="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-bold mb-4">REINFORCEMENT</div>
+                        <h2 class="text-4xl font-extrabold mb-6">Reinforcement Detailing</h2>
+                        <p class="text-lg text-gray-600 mb-8">From mild steel to prestressing strand to GFRP, DesignLogic handles every reinforcement type with automatic scheduling, bend details, and production-ready output.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Rebar placement with automatic scheduling</strong> -- place bars in 3D and get instant bar lists and weight summaries</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Prestressing strand patterns</strong> with debonding, harping, and stressing sequence definitions</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Post-tensioning duct layouts</strong> with profile geometry, tendon forces, and anchorage details</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Bar bend schedules (ACI standard)</strong> with CRSI-compliant bend types and fabrication dimensions</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Mesh reinforcement</strong> support with sheet sizes, laps, and placement drawings</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>GFRP and specialty reinforcement</strong> support for corrosion-resistant and non-metallic applications</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:order-1 relative">
+                        <div class="bg-white rounded-2xl shadow-2xl p-8 border border-emerald-200">
+                            <div class="flex items-center gap-2 mb-6">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                <span class="ml-3 text-sm text-gray-400 font-medium">Bar Bend Schedule</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden">
+                                    <div class="grid grid-cols-5 gap-0 text-xs font-bold text-emerald-800 bg-emerald-100 p-2">
+                                        <div>Mark</div>
+                                        <div>Size</div>
+                                        <div>Type</div>
+                                        <div>Length</div>
+                                        <div>Qty</div>
+                                    </div>
+                                    <div class="grid grid-cols-5 gap-0 text-xs text-gray-600 p-2 border-t border-gray-100">
+                                        <div>A1</div>
+                                        <div>#5</div>
+                                        <div>S1</div>
+                                        <div>12'-6"</div>
+                                        <div>24</div>
+                                    </div>
+                                    <div class="grid grid-cols-5 gap-0 text-xs text-gray-600 p-2 border-t border-gray-100">
+                                        <div>B1</div>
+                                        <div>#4</div>
+                                        <div>S2</div>
+                                        <div>4'-2"</div>
+                                        <div>48</div>
+                                    </div>
+                                    <div class="grid grid-cols-5 gap-0 text-xs text-gray-600 p-2 border-t border-gray-100">
+                                        <div>C1</div>
+                                        <div>#6</div>
+                                        <div>L1</div>
+                                        <div>8'-0"</div>
+                                        <div>12</div>
+                                    </div>
+                                    <div class="grid grid-cols-5 gap-0 text-xs text-gray-600 p-2 border-t border-gray-100">
+                                        <div>D1</div>
+                                        <div>#3</div>
+                                        <div>S1</div>
+                                        <div>3'-8"</div>
+                                        <div>96</div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-center">
+                                        <div class="text-lg font-bold text-emerald-700">4,280</div>
+                                        <div class="text-xs text-gray-500">Total lbs Rebar</div>
+                                    </div>
+                                    <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-center">
+                                        <div class="text-lg font-bold text-emerald-700">32</div>
+                                        <div class="text-xs text-gray-500">Strand - 0.5" Dia</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section 3: Cast Unit Management -->
+        <section class="py-20 bg-gradient-to-br from-emerald-50 to-green-50">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+                    <div>
+                        <div class="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-bold mb-4">CAST UNITS</div>
+                        <h2 class="text-4xl font-extrabold mb-6">Cast Unit Management</h2>
+                        <p class="text-lg text-gray-600 mb-8">Track every piece from model to production bed. DesignLogic organizes cast units, assigns piece marks, and generates production documentation your plant floor needs.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Piece mark assignment and tracking</strong> with configurable naming conventions and automatic sequencing</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Cast unit grouping and sequencing</strong> for efficient bed allocation and pour planning</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Pour-specific reinforcement details</strong> showing exactly what goes into each casting operation</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Embed and hardware tracking per unit</strong> with check-off lists for pre-pour verification</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Bill of materials generation</strong> with consolidated rebar, strand, hardware, and concrete quantities</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Production bed allocation</strong> with visual layout planning and optimization suggestions</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-white rounded-2xl shadow-2xl p-8 border border-emerald-200">
+                            <div class="flex items-center gap-2 mb-6">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                <span class="ml-3 text-sm text-gray-400 font-medium">Cast Unit Manager</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="bg-gradient-to-r from-emerald-100 to-green-50 p-4 rounded-lg">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <div class="text-sm font-bold text-emerald-800">Bed 1 - Long Line</div>
+                                        <span class="text-xs bg-emerald-600 text-white px-2 py-0.5 rounded">Active</span>
+                                    </div>
+                                    <div class="grid grid-cols-3 gap-2">
+                                        <div class="bg-white rounded p-2 text-center text-xs border border-emerald-200">
+                                            <div class="font-bold text-gray-700">DT-01</div>
+                                            <div class="text-gray-400">60'-0"</div>
+                                        </div>
+                                        <div class="bg-white rounded p-2 text-center text-xs border border-emerald-200">
+                                            <div class="font-bold text-gray-700">DT-02</div>
+                                            <div class="text-gray-400">60'-0"</div>
+                                        </div>
+                                        <div class="bg-white rounded p-2 text-center text-xs border border-emerald-200">
+                                            <div class="font-bold text-gray-700">DT-03</div>
+                                            <div class="text-gray-400">58'-6"</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gradient-to-r from-emerald-100 to-green-50 p-4 rounded-lg">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <div class="text-sm font-bold text-emerald-800">Bed 3 - Flat</div>
+                                        <span class="text-xs bg-yellow-500 text-white px-2 py-0.5 rounded">Queued</span>
+                                    </div>
+                                    <div class="grid grid-cols-4 gap-2">
+                                        <div class="bg-white rounded p-2 text-center text-xs border border-emerald-200">
+                                            <div class="font-bold text-gray-700">WP-11</div>
+                                        </div>
+                                        <div class="bg-white rounded p-2 text-center text-xs border border-emerald-200">
+                                            <div class="font-bold text-gray-700">WP-12</div>
+                                        </div>
+                                        <div class="bg-white rounded p-2 text-center text-xs border border-emerald-200">
+                                            <div class="font-bold text-gray-700">WP-13</div>
+                                        </div>
+                                        <div class="bg-white rounded p-2 text-center text-xs border border-emerald-200">
+                                            <div class="font-bold text-gray-700">WP-14</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-t border-gray-200 pt-3 flex items-center justify-between text-sm">
+                                    <span class="text-gray-500">12 beds | 87 pieces allocated</span>
+                                    <span class="bg-emerald-600 text-white px-3 py-1 rounded-md text-xs font-semibold">Generate BOM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section 4: Production Integration -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+                    <div class="md:order-2">
+                        <div class="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-bold mb-4">PRODUCTION</div>
+                        <h2 class="text-4xl font-extrabold mb-6">Production Integration</h2>
+                        <p class="text-lg text-gray-600 mb-8">Close the loop between detailing and manufacturing. DesignLogic connects your Tekla model directly to the CastLogic production module for seamless data flow.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Direct export to CastLogic production module</strong> -- piece data, schedules, and BOMs transfer in one click</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Automated piece data transfer</strong> including dimensions, weights, reinforcement, and hardware for every cast unit</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Real-time model updates</strong> when production changes occur -- RFIs, design changes, and field modifications sync back</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Quality checkpoint integration</strong> -- QC hold points defined in the model carry through to production checklists</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Shipping and erection data</strong> flows from model to dispatch -- load sequencing, trailer assignments, and erection priorities</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:order-1 relative">
+                        <div class="bg-white rounded-2xl shadow-2xl p-8 border border-emerald-200">
+                            <div class="flex items-center gap-2 mb-6">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                <span class="ml-3 text-sm text-gray-400 font-medium">CastLogic Sync Status</span>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3 p-3 bg-green-50 border border-green-200 rounded-lg">
+                                    <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                                    <div class="flex-1">
+                                        <div class="text-sm font-semibold text-gray-700">Piece Data</div>
+                                        <div class="text-xs text-gray-500">347 pieces synced</div>
+                                    </div>
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 bg-green-50 border border-green-200 rounded-lg">
+                                    <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                                    <div class="flex-1">
+                                        <div class="text-sm font-semibold text-gray-700">Reinforcement Schedules</div>
+                                        <div class="text-xs text-gray-500">All bar lists transferred</div>
+                                    </div>
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 bg-green-50 border border-green-200 rounded-lg">
+                                    <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                                    <div class="flex-1">
+                                        <div class="text-sm font-semibold text-gray-700">Production Schedule</div>
+                                        <div class="text-xs text-gray-500">Bed assignments created</div>
+                                    </div>
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                                    <div class="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+                                    <div class="flex-1">
+                                        <div class="text-sm font-semibold text-gray-700">QC Checkpoints</div>
+                                        <div class="text-xs text-gray-500">Syncing 24 hold points...</div>
+                                    </div>
+                                    <i data-lucide="loader" class="w-5 h-5 text-blue-500 animate-spin"></i>
+                                </div>
+                                <div class="border-t border-gray-200 pt-3 text-center text-xs text-gray-400">
+                                    Last sync: 2 minutes ago | Next: automatic
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Requirements -->
+        <section class="py-20 bg-gradient-to-br from-gray-50 to-emerald-50">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-extrabold mb-4">System Requirements</h2>
+                        <p class="text-xl text-gray-600">Everything you need to get started with the DesignLogic Tekla Plugin.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl shadow-lg p-8 border border-emerald-100">
+                            <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                                <i data-lucide="monitor" class="w-6 h-6 text-emerald-600"></i>
+                                Software
+                            </h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 flex-shrink-0"></i>
+                                    <span class="text-gray-700">Tekla Structures <strong>2022, 2023, 2024</strong></span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 flex-shrink-0"></i>
+                                    <span class="text-gray-700">Windows <strong>10 / 11</strong> (64-bit)</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 flex-shrink-0"></i>
+                                    <span class="text-gray-700"><strong>Tekla Open API</strong> access enabled</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 flex-shrink-0"></i>
+                                    <span class="text-gray-700">CastLogic ERP connection <span class="text-gray-400">(optional)</span></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg p-8 border border-emerald-100">
+                            <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                                <i data-lucide="cpu" class="w-6 h-6 text-emerald-600"></i>
+                                Recommended Hardware
+                            </h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 flex-shrink-0"></i>
+                                    <span class="text-gray-700">Multi-core processor (Intel i7 / AMD Ryzen 7+)</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 flex-shrink-0"></i>
+                                    <span class="text-gray-700">32 GB RAM minimum</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 flex-shrink-0"></i>
+                                    <span class="text-gray-700">OpenGL 3.0 compatible graphics card</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 flex-shrink-0"></i>
+                                    <span class="text-gray-700">SSD with 10 GB free space</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="demo" class="py-20 bg-gradient-to-r from-emerald-600 to-emerald-700">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white">Ready to Supercharge Your Tekla Workflow?</h2>
+                    <p class="text-xl text-emerald-100 mb-10">See how DesignLogic transforms Tekla Structures into a complete precast detailing and production planning platform. Request a personalized demo for your team.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                        <a href="contact.html" class="bg-white text-emerald-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-emerald-50 hover:shadow-xl transition-all">
+                            Request a Demo
+                        </a>
+                        <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all">
+                            Download Plugin
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-center gap-6 text-sm text-emerald-100">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            <span>Free 30-day trial</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            <span>Full support included</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            <span>Works standalone or with CastLogic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 text-gray-800">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-5 gap-8 mb-12">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="logo.svg" alt="DesignLogic Logo" class="h-10 mr-3">
+                        <span class="text-xl font-bold gradient-text">DesignLogic</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Engineering plugins that connect BIM and CAD software to precast manufacturing workflows. Part of the IntraSync product family.</p>
+                    <address class="not-italic text-gray-600 mb-4">
+                        <p class="font-semibold text-gray-900">IntraSync Industrial</p>
+                        <p>1401 21st Street Suite R</p>
+                        <p>Sacramento, CA 95811</p>
+                        <p class="mt-2"><a href="tel:+17076401380" class="hover:text-emerald-600">(707) 640-1380</a></p>
+                    </address>
+                </div>
+
+                <!-- Plugins -->
+                <div>
+                    <h3 class="font-bold text-gray-900 mb-4">Plugins</h3>
+                    <ul class="space-y-2">
+                        <li><a href="revit.html" class="hover:text-emerald-600 transition">Revit Plugin</a></li>
+                        <li><a href="tekla.html" class="hover:text-emerald-600 transition">Tekla Plugin</a></li>
+                        <li><a href="plugins.html" class="hover:text-emerald-600 transition">All Plugins</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-bold text-gray-900 mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="hover:text-emerald-600 transition">Blog</a></li>
+                        <li><a href="about.html" class="hover:text-emerald-600 transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-emerald-600 transition">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h3 class="font-bold text-gray-900 mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-emerald-600 transition">About IntraSync</a></li>
+                        <li><a href="contact.html" class="hover:text-emerald-600 transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- IntraSync Product Family -->
+            <div class="border-t border-gray-300 pt-8 pb-6">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                    <span class="text-gray-500 text-sm">Also from IntraSync:</span>
+                    <div class="flex flex-wrap items-center justify-center gap-6">
+                        <a href="https://intrasyncindustrial.com" class="text-gray-600 hover:text-blue-600 transition flex items-center gap-2">
+                            <i data-lucide="building-2" class="w-4 h-4"></i>
+                            <span class="font-medium">CastLogic</span>
+                            <span class="text-gray-400 text-sm">Precast ERP</span>
+                        </a>
+                        <span class="text-gray-300">|</span>
+                        <a href="https://materialslogic.intrasyncindustrial.com" class="text-gray-600 hover:text-amber-600 transition flex items-center gap-2">
+                            <i data-lucide="mountain" class="w-4 h-4"></i>
+                            <span class="font-medium">MaterialsLogic</span>
+                            <span class="text-gray-400 text-sm">Aggregates ERP</span>
+                        </a>
+                        <span class="text-gray-300">|</span>
+                        <a href="https://batchlogic.intrasyncindustrial.com" class="text-gray-600 hover:text-cyan-600 transition flex items-center gap-2">
+                            <i data-lucide="beaker" class="w-4 h-4"></i>
+                            <span class="font-medium">BatchLogic</span>
+                            <span class="text-gray-400 text-sm">Batch Control</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-300 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">&copy; 2025 IntraSync Industrial. All rights reserved.</p>
+                <div class="flex gap-6 text-sm mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-emerald-600 transition">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-emerald-600 transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revit Plugin for Precast Manufacturing | DesignLogic by IntraSync</title>
+    <meta name="description" content="The most comprehensive Revit integration for precast concrete manufacturers. Extract pieces, automate shop drawings, and sync with CastLogic ERP in real time.">
+    <link rel="canonical" href="https://designlogic.intrasyncindustrial.com/revit.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://designlogic.intrasyncindustrial.com/revit.html">
+    <meta property="og:title" content="Revit Plugin for Precast Manufacturing | DesignLogic">
+    <meta property="og:description" content="From BIM model to production floor. The most comprehensive Revit integration for precast concrete manufacturers.">
+    <meta property="og:site_name" content="IntraSync DesignLogic">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .animate-fadeInUp { animation: fadeInUp 0.8s ease-out forwards; }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .module-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .module-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .feature-icon { transition: transform 0.3s ease; }
+        .feature-card:hover .feature-icon { transform: scale(1.1) rotate(5deg); }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-emerald-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="logo.svg" alt="DesignLogic Logo" class="h-12 mr-3">
+                <span class="text-2xl font-bold gradient-text">DesignLogic</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Home</a>
+                <a href="plugins.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Plugins</a>
+                <a href="revit.html" class="text-emerald-600 font-semibold border-b-2 border-emerald-600 pb-1">Revit</a>
+                <a href="tekla.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Tekla</a>
+                <a href="blog.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Blog</a>
+                <a href="about.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">About</a>
+                <a href="contact.html" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold px-6 py-2.5 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all transform hover:scale-105 shadow-lg">Request Demo</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 py-20 md:py-28">
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute top-20 left-10 w-72 h-72 bg-emerald-500 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-20 right-10 w-96 h-96 bg-teal-500 rounded-full blur-3xl"></div>
+            </div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl mx-auto text-center animate-fadeInUp">
+                    <div class="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        Autodesk Revit Integration
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+                        Revit Plugin for <span class="gradient-text">Precast Manufacturing</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto">
+                        From BIM model to production floor. The most comprehensive Revit integration for precast concrete manufacturers.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="contact.html" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-emerald-600 hover:to-emerald-700 hover:shadow-xl transition-all transform hover:scale-105 shadow-lg">
+                            Download Plugin
+                        </a>
+                        <a href="#demo" class="bg-white border-2 border-emerald-300 text-emerald-700 px-8 py-4 rounded-lg font-bold text-lg hover:border-emerald-500 hover:bg-emerald-50 transition-all">
+                            <span class="flex items-center justify-center gap-2">
+                                <i data-lucide="play-circle" class="w-5 h-5"></i>
+                                Watch Demo
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Integration Points -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-extrabold mb-4">Key Integration Points</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Three pillars that connect your Revit workflow to every downstream process in your precast operation.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Card 1 -->
+                    <div class="module-card feature-card bg-white rounded-xl shadow-lg p-8 border border-emerald-100">
+                        <div class="feature-icon w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-5">
+                            <i data-lucide="database" class="w-8 h-8 text-emerald-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">BIM-to-Production</h3>
+                        <p class="text-gray-600">Extract every precast piece from your Revit model with full metadata -- dimensions, volumes, weights, reinforcement, and hardware -- ready for the production floor.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="module-card feature-card bg-white rounded-xl shadow-lg p-8 border border-emerald-100">
+                        <div class="feature-icon w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-5">
+                            <i data-lucide="file-text" class="w-8 h-8 text-emerald-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Automated Drawings</h3>
+                        <p class="text-gray-600">Shop drawings generated directly from Revit views with production annotations, rebar details, strand patterns, and dimensioning to your standards.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="module-card feature-card bg-white rounded-xl shadow-lg p-8 border border-emerald-100">
+                        <div class="feature-icon w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-5">
+                            <i data-lucide="refresh-cw" class="w-8 h-8 text-emerald-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Live ERP Sync</h3>
+                        <p class="text-gray-600">Real-time bidirectional synchronization with CastLogic ERP. Model changes propagate to scheduling, costing, and inventory without manual re-entry.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section 1: Precast Family Library -->
+        <section class="py-20 bg-gradient-to-br from-emerald-50 to-green-50">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+                    <div>
+                        <div class="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-bold mb-4">PRECAST FAMILIES</div>
+                        <h2 class="text-4xl font-extrabold mb-6">Precast Family Library</h2>
+                        <p class="text-lg text-gray-600 mb-8">A comprehensive library of parametric precast families designed to PCI and industry standards, giving your engineers a head start on every project.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Double tees, hollow core planks, wall panels</strong> -- all major structural and architectural precast types</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Columns, beams, stairs, and spandrels</strong> with fully parametric dimensions and reinforcement</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Customizable reinforcement patterns</strong> that adapt to project-specific engineering requirements</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Connection hardware embeds</strong> placed with engineering precision and production-ready parameters</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Lifting hardware placement</strong> with automatic weight calculations and pick-point optimization</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-white rounded-2xl shadow-2xl p-8 border border-emerald-200">
+                            <div class="flex items-center gap-2 mb-6">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                <span class="ml-3 text-sm text-gray-400 font-medium">Revit Family Browser</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3 flex items-center gap-3">
+                                    <i data-lucide="box" class="w-5 h-5 text-emerald-600"></i>
+                                    <span class="text-sm font-medium text-gray-700">Double Tee - 12DT34</span>
+                                    <span class="ml-auto text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded">Parametric</span>
+                                </div>
+                                <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3 flex items-center gap-3">
+                                    <i data-lucide="box" class="w-5 h-5 text-emerald-600"></i>
+                                    <span class="text-sm font-medium text-gray-700">Hollow Core - 8" HC Plank</span>
+                                    <span class="ml-auto text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded">Parametric</span>
+                                </div>
+                                <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3 flex items-center gap-3">
+                                    <i data-lucide="box" class="w-5 h-5 text-emerald-600"></i>
+                                    <span class="text-sm font-medium text-gray-700">Wall Panel - Insulated Sandwich</span>
+                                    <span class="ml-auto text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded">Parametric</span>
+                                </div>
+                                <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3 flex items-center gap-3">
+                                    <i data-lucide="box" class="w-5 h-5 text-emerald-600"></i>
+                                    <span class="text-sm font-medium text-gray-700">Spandrel Beam - L-Shape</span>
+                                    <span class="ml-auto text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded">Parametric</span>
+                                </div>
+                                <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 text-center text-sm text-gray-500">
+                                    + 120 more families included
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section 2: Automated Piece Extraction -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+                    <div class="md:order-2">
+                        <div class="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-bold mb-4">PIECE EXTRACTION</div>
+                        <h2 class="text-4xl font-extrabold mb-6">Automated Piece Extraction</h2>
+                        <p class="text-lg text-gray-600 mb-8">One click extracts every precast piece from your model with complete production data. No manual takeoffs, no spreadsheet exports, no room for error.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Piece marks, dimensions, volumes, and weights</strong> extracted automatically from the BIM model</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Reinforcement schedules per piece</strong> including bar sizes, lengths, bend shapes, and quantities</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Hardware lists and embed locations</strong> with coordinates, types, and installation notes</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Direct export to CastLogic</strong> production scheduling -- pieces flow into bed allocation and sequencing instantly</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:order-1 relative">
+                        <div class="bg-white rounded-2xl shadow-2xl p-8 border border-emerald-200">
+                            <div class="flex items-center gap-2 mb-6">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                <span class="ml-3 text-sm text-gray-400 font-medium">Piece Extraction Report</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="bg-gradient-to-r from-emerald-100 to-green-50 p-4 rounded-lg">
+                                    <div class="text-sm font-bold text-emerald-800 mb-1">DT-101 | Double Tee</div>
+                                    <div class="grid grid-cols-3 gap-2 text-xs text-gray-600">
+                                        <div>L: 60'-0"</div>
+                                        <div>Vol: 4.2 CY</div>
+                                        <div>Wt: 15,120 lbs</div>
+                                    </div>
+                                </div>
+                                <div class="bg-gradient-to-r from-emerald-100 to-green-50 p-4 rounded-lg">
+                                    <div class="text-sm font-bold text-emerald-800 mb-1">WP-204 | Wall Panel</div>
+                                    <div class="grid grid-cols-3 gap-2 text-xs text-gray-600">
+                                        <div>H: 28'-6"</div>
+                                        <div>Vol: 2.8 CY</div>
+                                        <div>Wt: 10,080 lbs</div>
+                                    </div>
+                                </div>
+                                <div class="bg-gradient-to-r from-emerald-100 to-green-50 p-4 rounded-lg">
+                                    <div class="text-sm font-bold text-emerald-800 mb-1">CB-012 | Column</div>
+                                    <div class="grid grid-cols-3 gap-2 text-xs text-gray-600">
+                                        <div>H: 32'-0"</div>
+                                        <div>Vol: 1.6 CY</div>
+                                        <div>Wt: 5,760 lbs</div>
+                                    </div>
+                                </div>
+                                <div class="border-t border-gray-200 pt-3 flex items-center justify-between text-sm">
+                                    <span class="text-gray-500">Total: 347 pieces</span>
+                                    <span class="bg-emerald-600 text-white px-3 py-1 rounded-md text-xs font-semibold">Export to CastLogic</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section 3: Shop Drawing Automation -->
+        <section class="py-20 bg-gradient-to-br from-emerald-50 to-green-50">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+                    <div>
+                        <div class="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-bold mb-4">SHOP DRAWINGS</div>
+                        <h2 class="text-4xl font-extrabold mb-6">Shop Drawing Automation</h2>
+                        <p class="text-lg text-gray-600 mb-8">Generate production-ready shop drawings directly from your Revit model. Eliminate hours of manual drafting while maintaining full control over every detail.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Production-ready drawings</strong> generated from Revit views with automatic formatting to your company standards</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Automatic dimensioning</strong> to shop standards with configurable tolerance and notation preferences</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Rebar placement drawings with bar lists</strong> -- complete reinforcement details for every piece</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Strand patterns and stressing sequences</strong> for prestressed members with elongation calculations</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Hardware and embed detail sheets</strong> with installation callouts and bill of materials</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Revision tracking and management</strong> with automatic cloud and delta markers</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-white rounded-2xl shadow-2xl p-8 border border-emerald-200">
+                            <div class="flex items-center gap-2 mb-6">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                <span class="ml-3 text-sm text-gray-400 font-medium">Shop Drawing Generator</span>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="border-2 border-dashed border-emerald-300 rounded-lg p-6 bg-emerald-50/50 text-center">
+                                    <i data-lucide="layout" class="w-10 h-10 text-emerald-400 mx-auto mb-2"></i>
+                                    <div class="text-sm text-gray-500 font-medium">Plan View with Dimensions</div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="border border-emerald-200 rounded-lg p-3 bg-emerald-50/30 text-center">
+                                        <div class="text-xs font-semibold text-emerald-700">Rebar Layout</div>
+                                    </div>
+                                    <div class="border border-emerald-200 rounded-lg p-3 bg-emerald-50/30 text-center">
+                                        <div class="text-xs font-semibold text-emerald-700">Strand Pattern</div>
+                                    </div>
+                                    <div class="border border-emerald-200 rounded-lg p-3 bg-emerald-50/30 text-center">
+                                        <div class="text-xs font-semibold text-emerald-700">Embed Details</div>
+                                    </div>
+                                    <div class="border border-emerald-200 rounded-lg p-3 bg-emerald-50/30 text-center">
+                                        <div class="text-xs font-semibold text-emerald-700">Bar List</div>
+                                    </div>
+                                </div>
+                                <div class="text-xs text-gray-400 text-center">Rev. C | Auto-generated from Revit Model</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section 4: Erection Planning -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+                    <div class="md:order-2">
+                        <div class="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-bold mb-4">ERECTION PLANNING</div>
+                        <h2 class="text-4xl font-extrabold mb-6">Erection Planning</h2>
+                        <p class="text-lg text-gray-600 mb-8">Plan the entire erection sequence inside Revit. Visualize crane movements, validate pick weights, and generate the field documentation your crew needs.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Erection sequence planning</strong> and 4D visualization directly within your Revit model</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Crane pick weight calculations</strong> including rigging, hardware, and safety factors</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Temporary bracing requirements</strong> documented per piece with load-path verification</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Connection sequence diagrams</strong> showing weld, bolt, and grout operations in order</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                                </div>
+                                <span class="text-gray-700"><strong>Field adjustment documentation</strong> with as-built markup and deviation tracking</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:order-1 relative">
+                        <div class="bg-white rounded-2xl shadow-2xl p-8 border border-emerald-200">
+                            <div class="flex items-center gap-2 mb-6">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                <span class="ml-3 text-sm text-gray-400 font-medium">Erection Sequence</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+                                    <div class="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
+                                    <div>
+                                        <div class="text-sm font-semibold text-gray-700">CB-012 Column</div>
+                                        <div class="text-xs text-gray-500">Pick: 5,760 lbs | Crane: 200T</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+                                    <div class="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
+                                    <div>
+                                        <div class="text-sm font-semibold text-gray-700">SP-008 Spandrel</div>
+                                        <div class="text-xs text-gray-500">Pick: 8,400 lbs | Brace: Req'd</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3">
+                                    <div class="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
+                                    <div>
+                                        <div class="text-sm font-semibold text-gray-700">DT-101 Double Tee</div>
+                                        <div class="text-xs text-gray-500">Pick: 15,120 lbs | Crane: 200T</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3 bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+                                    <div class="w-8 h-8 bg-yellow-500 text-white rounded-full flex items-center justify-center">
+                                        <i data-lucide="alert-triangle" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm font-semibold text-yellow-800">Temp Bracing Check</div>
+                                        <div class="text-xs text-yellow-600">3 kicker braces required before release</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Requirements -->
+        <section class="py-20 bg-gradient-to-br from-gray-50 to-emerald-50">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-extrabold mb-4">System Requirements</h2>
+                        <p class="text-xl text-gray-600">Everything you need to get started with the DesignLogic Revit Plugin.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl shadow-lg p-8 border border-emerald-100">
+                            <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                                <i data-lucide="monitor" class="w-6 h-6 text-emerald-600"></i>
+                                Software
+                            </h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 flex-shrink-0"></i>
+                                    <span class="text-gray-700">Autodesk Revit <strong>2022, 2023, 2024, 2025</strong></span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 flex-shrink-0"></i>
+                                    <span class="text-gray-700">Windows <strong>10 / 11</strong> (64-bit)</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 flex-shrink-0"></i>
+                                    <span class="text-gray-700"><strong>.NET Framework 4.8</strong> or later</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 flex-shrink-0"></i>
+                                    <span class="text-gray-700">CastLogic ERP connection <span class="text-gray-400">(optional)</span></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-lg p-8 border border-emerald-100">
+                            <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                                <i data-lucide="cpu" class="w-6 h-6 text-emerald-600"></i>
+                                Recommended Hardware
+                            </h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 flex-shrink-0"></i>
+                                    <span class="text-gray-700">Multi-core processor (Intel i7 / AMD Ryzen 7+)</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 flex-shrink-0"></i>
+                                    <span class="text-gray-700">32 GB RAM minimum</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 flex-shrink-0"></i>
+                                    <span class="text-gray-700">DirectX 11 capable graphics card</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 flex-shrink-0"></i>
+                                    <span class="text-gray-700">SSD with 10 GB free space</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="demo" class="py-20 bg-gradient-to-r from-emerald-600 to-emerald-700">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white">Ready to Connect Revit to Your Production Floor?</h2>
+                    <p class="text-xl text-emerald-100 mb-10">See how DesignLogic eliminates manual data transfer between engineering and manufacturing. Request a personalized demo for your precast operation.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                        <a href="contact.html" class="bg-white text-emerald-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-emerald-50 hover:shadow-xl transition-all">
+                            Request a Demo
+                        </a>
+                        <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all">
+                            Download Plugin
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-center gap-6 text-sm text-emerald-100">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            <span>Free 30-day trial</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            <span>Full support included</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            <span>Works standalone or with CastLogic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 text-gray-800">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-5 gap-8 mb-12">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="logo.svg" alt="DesignLogic Logo" class="h-10 mr-3">
+                        <span class="text-xl font-bold gradient-text">DesignLogic</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Engineering plugins that connect BIM and CAD software to precast manufacturing workflows. Part of the IntraSync product family.</p>
+                    <address class="not-italic text-gray-600 mb-4">
+                        <p class="font-semibold text-gray-900">IntraSync Industrial</p>
+                        <p>1401 21st Street Suite R</p>
+                        <p>Sacramento, CA 95811</p>
+                        <p class="mt-2"><a href="tel:+17076401380" class="hover:text-emerald-600">(707) 640-1380</a></p>
+                    </address>
+                </div>
+
+                <!-- Plugins -->
+                <div>
+                    <h3 class="font-bold text-gray-900 mb-4">Plugins</h3>
+                    <ul class="space-y-2">
+                        <li><a href="revit.html" class="hover:text-emerald-600 transition">Revit Plugin</a></li>
+                        <li><a href="tekla.html" class="hover:text-emerald-600 transition">Tekla Plugin</a></li>
+                        <li><a href="plugins.html" class="hover:text-emerald-600 transition">All Plugins</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-bold text-gray-900 mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="hover:text-emerald-600 transition">Blog</a></li>
+                        <li><a href="about.html" class="hover:text-emerald-600 transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-emerald-600 transition">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h3 class="font-bold text-gray-900 mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-emerald-600 transition">About IntraSync</a></li>
+                        <li><a href="contact.html" class="hover:text-emerald-600 transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- IntraSync Product Family -->
+            <div class="border-t border-gray-300 pt-8 pb-6">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                    <span class="text-gray-500 text-sm">Also from IntraSync:</span>
+                    <div class="flex flex-wrap items-center justify-center gap-6">
+                        <a href="https://intrasyncindustrial.com" class="text-gray-600 hover:text-blue-600 transition flex items-center gap-2">
+                            <i data-lucide="building-2" class="w-4 h-4"></i>
+                            <span class="font-medium">CastLogic</span>
+                            <span class="text-gray-400 text-sm">Precast ERP</span>
+                        </a>
+                        <span class="text-gray-300">|</span>
+                        <a href="https://materialslogic.intrasyncindustrial.com" class="text-gray-600 hover:text-amber-600 transition flex items-center gap-2">
+                            <i data-lucide="mountain" class="w-4 h-4"></i>
+                            <span class="font-medium">MaterialsLogic</span>
+                            <span class="text-gray-400 text-sm">Aggregates ERP</span>
+                        </a>
+                        <span class="text-gray-300">|</span>
+                        <a href="https://batchlogic.intrasyncindustrial.com" class="text-gray-600 hover:text-cyan-600 transition flex items-center gap-2">
+                            <i data-lucide="beaker" class="w-4 h-4"></i>
+                            <span class="font-medium">BatchLogic</span>
+                            <span class="text-gray-400 text-sm">Batch Control</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-300 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">&copy; 2025 IntraSync Industrial. All rights reserved.</p>
+                <div class="flex gap-6 text-sm mt-4 md:mt-0">
+                    <a href="privacy.html" class="hover:text-emerald-600 transition">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-emerald-600 transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

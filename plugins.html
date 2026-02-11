@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesignLogic Plugins - Design Tool Integrations for Precast Engineering | IntraSync Industrial</title>
+    <meta name="description" content="Explore all DesignLogic plugins: Revit, Tekla Structures, Allplan, AutoCAD, Bentley ProStructures, and SketchUp integrations for precast concrete engineering and production workflows.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://designlogic.intrasyncindustrial.com/plugins.html">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://designlogic.intrasyncindustrial.com/plugins.html">
+    <meta property="og:title" content="DesignLogic Plugins - Design Tool Integrations for Precast Engineering">
+    <meta property="og:description" content="Explore all DesignLogic plugins: Revit, Tekla Structures, Allplan, AutoCAD, Bentley ProStructures, and SketchUp integrations for precast concrete engineering and production workflows.">
+    <meta property="og:image" content="https://designlogic.intrasyncindustrial.com/logo.svg">
+    <meta property="og:site_name" content="IntraSync Industrial">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DesignLogic Plugins - Design Tool Integrations for Precast Engineering">
+    <meta name="twitter:description" content="Explore all DesignLogic plugins: Revit, Tekla Structures, Allplan, AutoCAD, Bentley ProStructures, and SketchUp integrations for precast concrete engineering and production workflows.">
+    <meta name="twitter:image" content="https://designlogic.intrasyncindustrial.com/logo.svg">
+
+    <!-- Keywords -->
+    <meta name="keywords" content="Revit precast plugin, Tekla precast, Allplan precast, AutoCAD precast, Bentley ProStructures, SketchUp precast, BIM precast integration, precast engineering plugins, design tool integration, CastLogic ERP sync">
+    <meta name="author" content="IntraSync Industrial">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "IntraSync Industrial",
+      "url": "https://intrasyncindustrial.com",
+      "logo": "https://designlogic.intrasyncindustrial.com/logo.svg",
+      "description": "Leading provider of design tool plugins for precast concrete engineering and ERP integration",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1401 21st Street Suite R",
+        "addressLocality": "Sacramento",
+        "addressRegion": "CA",
+        "postalCode": "95811",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-707-640-1380",
+        "contactType": "Sales"
+      }
+    }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+
+        .gradient-text {
+            background: linear-gradient(to right, #059669, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+        }
+
+        .plugin-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plugin-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #059669, #10b981);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .plugin-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .plugin-card:hover {
+            transform: translateY(-5px);
+            border-color: #059669;
+            box-shadow: 0 20px 25px -5px rgba(5, 150, 105, 0.1), 0 10px 10px -5px rgba(5, 150, 105, 0.04);
+        }
+
+        .plugin-icon {
+            background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+            transition: transform 0.3s ease;
+        }
+
+        .plugin-card:hover .plugin-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .feature-check {
+            flex-shrink: 0;
+        }
+
+        .cross-platform-card {
+            transition: all 0.3s ease;
+        }
+
+        .cross-platform-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(5, 150, 105, 0.1);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-emerald-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="logo.svg" alt="DesignLogic Logo" class="h-12 mr-3">
+                <span class="text-2xl font-bold gradient-text">DesignLogic</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Home</a>
+                <a href="plugins.html" class="text-emerald-600 font-medium">Plugins</a>
+                <a href="revit.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Revit</a>
+                <a href="tekla.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Tekla</a>
+                <a href="blog.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Blog</a>
+                <a href="about.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">About</a>
+                <a href="contact.html" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold px-6 py-2.5 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all transform hover:scale-105 shadow-lg">Request Demo</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero-bg py-20">
+            <div class="container mx-auto px-6">
+                <!-- Breadcrumb -->
+                <nav class="mb-8 text-sm">
+                    <ol class="flex items-center space-x-2 text-gray-600">
+                        <li><a href="index.html" class="hover:text-emerald-600 transition-colors">Home</a></li>
+                        <li><i data-lucide="chevron-right" class="w-4 h-4"></i></li>
+                        <li class="text-emerald-700 font-medium">Plugins</li>
+                    </ol>
+                </nav>
+
+                <div class="text-center max-w-4xl mx-auto">
+                    <h1 class="text-5xl md:text-6xl font-extrabold mb-6 text-gray-900">
+                        All <span class="gradient-text">Design Tool Plugins</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-700 mb-4">
+                        6 Powerful Integrations. One Unified Workflow.
+                    </p>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                        DesignLogic provides deep, native plugins for the industry's leading design tools, connecting your engineering team directly to CastLogic ERP production workflows. From BIM modeling to shop drawings, every plugin is purpose-built for precast concrete manufacturing.
+                    </p>
+
+                    <!-- Quick Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mt-10">
+                        <div class="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-emerald-100">
+                            <div class="text-3xl font-extrabold text-emerald-600">6</div>
+                            <div class="text-sm text-gray-600 font-medium">Design Tools</div>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-emerald-100">
+                            <div class="text-3xl font-extrabold text-emerald-600">IFC 4.0</div>
+                            <div class="text-sm text-gray-600 font-medium">Compliant</div>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-emerald-100">
+                            <div class="text-3xl font-extrabold text-emerald-600">Real-Time</div>
+                            <div class="text-sm text-gray-600 font-medium">ERP Sync</div>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-emerald-100">
+                            <div class="text-3xl font-extrabold text-emerald-600">openBIM</div>
+                            <div class="text-sm text-gray-600 font-medium">Native Support</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plugin Detail Sections -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="max-w-6xl mx-auto space-y-16">
+
+                    <!-- 1. Autodesk Revit Plugin -->
+                    <div id="revit" class="plugin-card bg-white rounded-2xl shadow-lg border border-gray-200 p-8 md:p-10">
+                        <div class="flex flex-col lg:flex-row gap-8">
+                            <!-- Left: Icon + Title -->
+                            <div class="lg:w-1/3">
+                                <div class="plugin-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-md">
+                                    <i data-lucide="pen-tool" class="w-8 h-8 text-white"></i>
+                                </div>
+                                <div class="inline-block bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold mb-3 tracking-wider uppercase">BIM Integration</div>
+                                <h2 class="text-3xl font-extrabold text-gray-900 mb-3">Autodesk Revit Plugin</h2>
+                                <p class="text-gray-600 leading-relaxed mb-6">
+                                    The DesignLogic Revit Plugin transforms Autodesk Revit into a precast-first BIM environment. From parametric precast families to automated production drawing export, your engineering team works natively inside Revit while maintaining a live connection to CastLogic ERP for scheduling, inventory, and production planning.
+                                </p>
+                                <a href="revit.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all shadow-md">
+                                    Explore Revit Plugin <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                            <!-- Right: Features -->
+                            <div class="lg:w-2/3 lg:border-l lg:border-gray-200 lg:pl-8">
+                                <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Key Capabilities</h3>
+                                <div class="grid md:grid-cols-2 gap-3">
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Precast Family Library</div>
+                                            <div class="text-xs text-gray-500">Walls, columns, beams, double tees, hollow core, stairs</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Automated Piece Extraction</div>
+                                            <div class="text-xs text-gray-500">Extract individual pieces from full Revit model</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Production Drawing Export</div>
+                                            <div class="text-xs text-gray-500">Shop drawings generated directly from Revit views</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Rebar/Strand Scheduling</div>
+                                            <div class="text-xs text-gray-500">Automatic bar lists and strand patterns</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Connection Detail Library</div>
+                                            <div class="text-xs text-gray-500">Pre-built connection families and details</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Direct CastLogic ERP Sync</div>
+                                            <div class="text-xs text-gray-500">Live sync to production scheduling module</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Erection Sequence Planning</div>
+                                            <div class="text-xs text-gray-500">Visual erection sequencing with 4D scheduling</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Weight & Lifting Points</div>
+                                            <div class="text-xs text-gray-500">Automated weight calculations and lift insert placement</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Tekla Structures Plugin -->
+                    <div id="tekla" class="plugin-card bg-white rounded-2xl shadow-lg border border-gray-200 p-8 md:p-10">
+                        <div class="flex flex-col lg:flex-row gap-8">
+                            <!-- Left: Icon + Title -->
+                            <div class="lg:w-1/3">
+                                <div class="plugin-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-md">
+                                    <i data-lucide="ruler" class="w-8 h-8 text-white"></i>
+                                </div>
+                                <div class="inline-block bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold mb-3 tracking-wider uppercase">Structural Detailing</div>
+                                <h2 class="text-3xl font-extrabold text-gray-900 mb-3">Tekla Structures Plugin</h2>
+                                <p class="text-gray-600 leading-relaxed mb-6">
+                                    The DesignLogic Tekla Plugin delivers deep integration with Trimble Tekla Structures for structural precast detailing. Manage connections, rebar, strand patterns, cast units, and piece marks with purpose-built tools that push data directly into CastLogic ERP for production planning and scheduling.
+                                </p>
+                                <a href="tekla.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all shadow-md">
+                                    Explore Tekla Plugin <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                            <!-- Right: Features -->
+                            <div class="lg:w-2/3 lg:border-l lg:border-gray-200 lg:pl-8">
+                                <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Key Capabilities</h3>
+                                <div class="grid md:grid-cols-2 gap-3">
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Precast Connection Detailing</div>
+                                            <div class="text-xs text-gray-500">Wet and dry connection types with full detailing</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Rebar & Strand Detailing</div>
+                                            <div class="text-xs text-gray-500">Full bend schedules and strand pattern generation</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Cast Unit Management</div>
+                                            <div class="text-xs text-gray-500">Piece marks, cast units, and assembly grouping</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">IFC Export with Precast Properties</div>
+                                            <div class="text-xs text-gray-500">Precast-specific IFC property sets and attributes</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Embed & Hardware Placement</div>
+                                            <div class="text-xs text-gray-500">Automated embed layout and hardware coordination</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Production Drawing Automation</div>
+                                            <div class="text-xs text-gray-500">Batch drawing generation with custom templates</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Clash Detection</div>
+                                            <div class="text-xs text-gray-500">Precast-specific clash checks for assemblies</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Direct CastLogic Sync</div>
+                                            <div class="text-xs text-gray-500">Bidirectional sync with ERP production module</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Allplan Precast Plugin -->
+                    <div id="allplan" class="plugin-card bg-white rounded-2xl shadow-lg border border-gray-200 p-8 md:p-10">
+                        <div class="flex flex-col lg:flex-row gap-8">
+                            <!-- Left: Icon + Title -->
+                            <div class="lg:w-1/3">
+                                <div class="plugin-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-md">
+                                    <i data-lucide="layers" class="w-8 h-8 text-white"></i>
+                                </div>
+                                <div class="inline-block bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold mb-3 tracking-wider uppercase">Precast Systems</div>
+                                <h2 class="text-3xl font-extrabold text-gray-900 mb-3">Allplan Precast Plugin</h2>
+                                <p class="text-gray-600 leading-relaxed mb-6">
+                                    The DesignLogic Allplan Plugin is purpose-built for precast wall and floor system design within Allplan Precast. Optimize panel layouts, automate hollow core floor plans, generate production-ready piece lists, and connect directly to pallet planning and transport workflows in CastLogic ERP.
+                                </p>
+                                <a href="allplan.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all shadow-md">
+                                    Explore Allplan Plugin <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                            <!-- Right: Features -->
+                            <div class="lg:w-2/3 lg:border-l lg:border-gray-200 lg:pl-8">
+                                <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Key Capabilities</h3>
+                                <div class="grid md:grid-cols-2 gap-3">
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Wall Panel Design & Optimization</div>
+                                            <div class="text-xs text-gray-500">Automated panel splitting and layout optimization</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Hollow Core Floor Layout</div>
+                                            <div class="text-xs text-gray-500">Optimized slab placement with auto-cutting plans</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Automated Piece Lists</div>
+                                            <div class="text-xs text-gray-500">Piece lists with dimensions, weights, and volumes</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Production Planning Integration</div>
+                                            <div class="text-xs text-gray-500">Direct feed to CastLogic production scheduling</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Reinforcement Detailing</div>
+                                            <div class="text-xs text-gray-500">Mesh and rebar placement with scheduling</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Element Numbering & Marking</div>
+                                            <div class="text-xs text-gray-500">Automatic mark generation and numbering rules</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Pallet Planning</div>
+                                            <div class="text-xs text-gray-500">Production bed and pallet layout optimization</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Transport Planning</div>
+                                            <div class="text-xs text-gray-500">Load sequencing and trailer layout planning</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. AutoCAD Plugin -->
+                    <div id="autocad" class="plugin-card bg-white rounded-2xl shadow-lg border border-gray-200 p-8 md:p-10">
+                        <div class="flex flex-col lg:flex-row gap-8">
+                            <!-- Left: Icon + Title -->
+                            <div class="lg:w-1/3">
+                                <div class="plugin-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-md">
+                                    <i data-lucide="pencil-ruler" class="w-8 h-8 text-white"></i>
+                                </div>
+                                <div class="inline-block bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold mb-3 tracking-wider uppercase">2D/3D Drafting</div>
+                                <h2 class="text-3xl font-extrabold text-gray-900 mb-3">AutoCAD Plugin</h2>
+                                <p class="text-gray-600 leading-relaxed mb-6">
+                                    The DesignLogic AutoCAD Plugin bridges 2D and 3D drafting workflows with modern ERP-connected production. Extract piece data from legacy drawings, use precast-specific block libraries, automate shop drawing generation, and batch-export to PDF with full revision tracking.
+                                </p>
+                                <a href="autocad.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all shadow-md">
+                                    Explore AutoCAD Plugin <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                            <!-- Right: Features -->
+                            <div class="lg:w-2/3 lg:border-l lg:border-gray-200 lg:pl-8">
+                                <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Key Capabilities</h3>
+                                <div class="grid md:grid-cols-2 gap-3">
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Shop Drawing Templates</div>
+                                            <div class="text-xs text-gray-500">Industry-standard precast shop drawing layouts</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">DWG-to-ERP Data Extraction</div>
+                                            <div class="text-xs text-gray-500">Pull piece data directly from DWG attributes</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Precast Hardware Block Library</div>
+                                            <div class="text-xs text-gray-500">Embeds, connections, anchors, and lifting hardware</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Auto Dimension & Annotation</div>
+                                            <div class="text-xs text-gray-500">Intelligent dimensioning per precast standards</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Piece Data Attribute Extraction</div>
+                                            <div class="text-xs text-gray-500">Automated extraction of marks, weights, dimensions</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Batch Plot to PDF</div>
+                                            <div class="text-xs text-gray-500">Multi-sheet batch plotting with naming conventions</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Revision Management</div>
+                                            <div class="text-xs text-gray-500">Full revision tracking with cloud/delta markers</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Legacy Drawing Import</div>
+                                            <div class="text-xs text-gray-500">Import and convert older drawing formats</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Bentley ProStructures Plugin -->
+                    <div id="bentley" class="plugin-card bg-white rounded-2xl shadow-lg border border-gray-200 p-8 md:p-10">
+                        <div class="flex flex-col lg:flex-row gap-8">
+                            <!-- Left: Icon + Title -->
+                            <div class="lg:w-1/3">
+                                <div class="plugin-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-md">
+                                    <i data-lucide="building" class="w-8 h-8 text-white"></i>
+                                </div>
+                                <div class="inline-block bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold mb-3 tracking-wider uppercase">Structural Engineering</div>
+                                <h2 class="text-3xl font-extrabold text-gray-900 mb-3">Bentley ProStructures Plugin</h2>
+                                <p class="text-gray-600 leading-relaxed mb-6">
+                                    The DesignLogic Bentley ProStructures Plugin connects structural engineering workflows with precast production. Perform frame analysis, verify connections, run code compliance checks against ACI and PCI standards, and generate engineering reports that feed directly into the CastLogic production pipeline.
+                                </p>
+                                <a href="bentley.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all shadow-md">
+                                    Explore Bentley Plugin <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                            <!-- Right: Features -->
+                            <div class="lg:w-2/3 lg:border-l lg:border-gray-200 lg:pl-8">
+                                <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Key Capabilities</h3>
+                                <div class="grid md:grid-cols-2 gap-3">
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Precast Frame Analysis & Design</div>
+                                            <div class="text-xs text-gray-500">Structural analysis tailored for precast frames</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Connection Engineering</div>
+                                            <div class="text-xs text-gray-500">Connection design and verification workflows</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Structural Load Analysis</div>
+                                            <div class="text-xs text-gray-500">Integrated load path analysis for precast systems</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Foundation Design</div>
+                                            <div class="text-xs text-gray-500">Foundation engineering for precast structures</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Code Compliance Checking</div>
+                                            <div class="text-xs text-gray-500">ACI 318, PCI Design Handbook compliance checks</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Engineering Report Generation</div>
+                                            <div class="text-xs text-gray-500">Automated calculation packages and reports</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Model-to-Production Workflow</div>
+                                            <div class="text-xs text-gray-500">Engineering model drives production scheduling</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. SketchUp Plugin -->
+                    <div id="sketchup" class="plugin-card bg-white rounded-2xl shadow-lg border border-gray-200 p-8 md:p-10">
+                        <div class="flex flex-col lg:flex-row gap-8">
+                            <!-- Left: Icon + Title -->
+                            <div class="lg:w-1/3">
+                                <div class="plugin-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-5 shadow-md">
+                                    <i data-lucide="box" class="w-8 h-8 text-white"></i>
+                                </div>
+                                <div class="inline-block bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold mb-3 tracking-wider uppercase">3D Visualization</div>
+                                <h2 class="text-3xl font-extrabold text-gray-900 mb-3">SketchUp Plugin</h2>
+                                <p class="text-gray-600 leading-relaxed mb-6">
+                                    The DesignLogic SketchUp Plugin brings precast visualization to the early project stages. Create quick conceptual models for client presentations, generate photo-realistic renderings of finished buildings, and hand off conceptual designs to detailed BIM tools for full engineering development.
+                                </p>
+                                <a href="sketchup.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all shadow-md">
+                                    Explore SketchUp Plugin <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                            <!-- Right: Features -->
+                            <div class="lg:w-2/3 lg:border-l lg:border-gray-200 lg:pl-8">
+                                <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Key Capabilities</h3>
+                                <div class="grid md:grid-cols-2 gap-3">
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Quick Project Visualization</div>
+                                            <div class="text-xs text-gray-500">Rapid precast building massing and visualization</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Client Presentation Generation</div>
+                                            <div class="text-xs text-gray-500">Professional presentation-ready views and exports</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Conceptual Design to BIM Handoff</div>
+                                            <div class="text-xs text-gray-500">Export to Revit, Tekla, or Allplan for detailing</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Material & Finish Visualization</div>
+                                            <div class="text-xs text-gray-500">Precast finishes, textures, and color libraries</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Solar & Shadow Studies</div>
+                                            <div class="text-xs text-gray-500">Daylight analysis and shadow impact visualization</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">Photo-Realistic Rendering</div>
+                                            <div class="text-xs text-gray-500">High-quality renders with precast material library</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-emerald-50 transition">
+                                        <div class="feature-check w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center mt-0.5">
+                                            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900 text-sm">VR Export</div>
+                                            <div class="text-xs text-gray-500">Virtual reality walkthroughs for client review</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Cross-Platform Features Section -->
+        <section class="py-20 bg-gradient-to-br from-emerald-50 to-green-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-14">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900">
+                        Cross-Platform <span class="gradient-text">Standard Features</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Every DesignLogic plugin shares a common foundation of capabilities that ensure interoperability, data integrity, and seamless collaboration across your entire engineering team.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                    <!-- IFC 4.0 Support -->
+                    <div class="cross-platform-card bg-white rounded-xl p-6 text-center border border-emerald-100 shadow-sm">
+                        <div class="w-14 h-14 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="file-code-2" class="w-7 h-7 text-emerald-600"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 text-sm mb-1">IFC 4.0 Support</h3>
+                        <p class="text-xs text-gray-500">Full IFC 4.0 import/export with precast property sets</p>
+                    </div>
+
+                    <!-- openBIM Compliance -->
+                    <div class="cross-platform-card bg-white rounded-xl p-6 text-center border border-emerald-100 shadow-sm">
+                        <div class="w-14 h-14 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="shield-check" class="w-7 h-7 text-emerald-600"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 text-sm mb-1">openBIM Compliance</h3>
+                        <p class="text-xs text-gray-500">buildingSMART certified openBIM workflows</p>
+                    </div>
+
+                    <!-- Real-Time ERP Sync -->
+                    <div class="cross-platform-card bg-white rounded-xl p-6 text-center border border-emerald-100 shadow-sm">
+                        <div class="w-14 h-14 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="refresh-cw" class="w-7 h-7 text-emerald-600"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 text-sm mb-1">Real-Time ERP Sync</h3>
+                        <p class="text-xs text-gray-500">Live bidirectional sync with CastLogic ERP</p>
+                    </div>
+
+                    <!-- Multi-User Collaboration -->
+                    <div class="cross-platform-card bg-white rounded-xl p-6 text-center border border-emerald-100 shadow-sm">
+                        <div class="w-14 h-14 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="users" class="w-7 h-7 text-emerald-600"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 text-sm mb-1">Multi-User Collaboration</h3>
+                        <p class="text-xs text-gray-500">Concurrent users with conflict resolution</p>
+                    </div>
+
+                    <!-- Version Control -->
+                    <div class="cross-platform-card bg-white rounded-xl p-6 text-center border border-emerald-100 shadow-sm">
+                        <div class="w-14 h-14 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="git-branch" class="w-7 h-7 text-emerald-600"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 text-sm mb-1">Version Control</h3>
+                        <p class="text-xs text-gray-500">Full revision history with rollback capability</p>
+                    </div>
+
+                    <!-- Cloud Backup -->
+                    <div class="cross-platform-card bg-white rounded-xl p-6 text-center border border-emerald-100 shadow-sm">
+                        <div class="w-14 h-14 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="cloud" class="w-7 h-7 text-emerald-600"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 text-sm mb-1">Cloud Backup</h3>
+                        <p class="text-xs text-gray-500">Automatic cloud backup with encryption</p>
+                    </div>
+
+                    <!-- API Access -->
+                    <div class="cross-platform-card bg-white rounded-xl p-6 text-center border border-emerald-100 shadow-sm">
+                        <div class="w-14 h-14 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="code" class="w-7 h-7 text-emerald-600"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 text-sm mb-1">API Access</h3>
+                        <p class="text-xs text-gray-500">RESTful API for custom integrations</p>
+                    </div>
+
+                    <!-- Webhook Notifications -->
+                    <div class="cross-platform-card bg-white rounded-xl p-6 text-center border border-emerald-100 shadow-sm">
+                        <div class="w-14 h-14 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="bell" class="w-7 h-7 text-emerald-600"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 text-sm mb-1">Webhook Notifications</h3>
+                        <p class="text-xs text-gray-500">Event-driven alerts for model changes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It All Connects Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900">How It All Connects</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Every DesignLogic plugin feeds into the same CastLogic ERP backbone, creating a single source of truth from design through production.</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-xl p-10 md:p-12 text-white">
+                    <div class="text-center mb-8">
+                        <div class="inline-block bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-3 rounded-full font-bold text-lg mb-4">
+                            Design to Production Pipeline
+                        </div>
+                        <p class="text-gray-300">Data flows automatically between your design tools and production floor</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10">
+                            <div class="flex items-center gap-3 mb-3">
+                                <i data-lucide="pen-tool" class="w-5 h-5 text-emerald-400"></i>
+                                <i data-lucide="arrow-right" class="w-4 h-4 text-gray-500"></i>
+                                <i data-lucide="factory" class="w-5 h-5 text-emerald-400"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-1">Revit / Tekla / Allplan</h3>
+                            <p class="text-sm text-gray-300">BIM models push piece data, rebar schedules, and BOMs directly to production scheduling</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10">
+                            <div class="flex items-center gap-3 mb-3">
+                                <i data-lucide="pencil-ruler" class="w-5 h-5 text-emerald-400"></i>
+                                <i data-lucide="arrow-right" class="w-4 h-4 text-gray-500"></i>
+                                <i data-lucide="database" class="w-5 h-5 text-emerald-400"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-1">AutoCAD / Legacy DWG</h3>
+                            <p class="text-sm text-gray-300">Drawing attributes are extracted and mapped to ERP piece records automatically</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10">
+                            <div class="flex items-center gap-3 mb-3">
+                                <i data-lucide="building" class="w-5 h-5 text-emerald-400"></i>
+                                <i data-lucide="arrow-right" class="w-4 h-4 text-gray-500"></i>
+                                <i data-lucide="clipboard-check" class="w-5 h-5 text-emerald-400"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-1">Bentley ProStructures</h3>
+                            <p class="text-sm text-gray-300">Engineering calcs and code compliance reports link to project documentation in ERP</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10">
+                            <div class="flex items-center gap-3 mb-3">
+                                <i data-lucide="box" class="w-5 h-5 text-emerald-400"></i>
+                                <i data-lucide="arrow-right" class="w-4 h-4 text-gray-500"></i>
+                                <i data-lucide="presentation" class="w-5 h-5 text-emerald-400"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-1">SketchUp Conceptual</h3>
+                            <p class="text-sm text-gray-300">Conceptual designs hand off to BIM tools for detailed engineering and production</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white">Ready to Connect Your Design Tools?</h2>
+                <p class="text-xl text-emerald-100 mb-10 max-w-3xl mx-auto">
+                    See how DesignLogic plugins transform your engineering workflow. Schedule a personalized demo with our precast technology team.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-white text-emerald-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-emerald-50 transition shadow-xl">
+                        Request a Demo
+                    </a>
+                    <a href="index.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition">
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="logo.svg" alt="DesignLogic Logo" class="h-10 mr-3">
+                        <span class="text-xl font-bold gradient-text">DesignLogic</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">Design tool plugins that connect precast engineering workflows to CastLogic ERP production systems.</p>
+                    <address class="mt-4 text-gray-400 not-italic">
+                        <p>1401 21st Street Suite R<br>Sacramento, CA 95811</p>
+                        <p class="mt-2"><a href="tel:+17076401380" class="hover:text-white transition">(707) 640-1380</a></p>
+                    </address>
+                </div>
+
+                <!-- Plugins -->
+                <div>
+                    <h4 class="font-semibold mb-4 tracking-wider uppercase text-gray-400">Plugins</h4>
+                    <ul class="space-y-3">
+                        <li><a href="revit.html" class="text-gray-300 hover:text-white transition">Revit Plugin</a></li>
+                        <li><a href="tekla.html" class="text-gray-300 hover:text-white transition">Tekla Plugin</a></li>
+                        <li><a href="allplan.html" class="text-gray-300 hover:text-white transition">Allplan Plugin</a></li>
+                        <li><a href="autocad.html" class="text-gray-300 hover:text-white transition">AutoCAD Plugin</a></li>
+                        <li><a href="bentley.html" class="text-gray-300 hover:text-white transition">Bentley Plugin</a></li>
+                        <li><a href="sketchup.html" class="text-gray-300 hover:text-white transition">SketchUp Plugin</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="font-semibold mb-4 tracking-wider uppercase text-gray-400">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="plugins.html" class="text-gray-300 hover:text-white transition">All Plugins</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-white transition">Blog</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="font-semibold mb-4 tracking-wider uppercase text-gray-400">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition">About IntraSync</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition">Request Demo</a></li>
+                        <li><a href="privacy.html" class="text-gray-300 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-300 hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- IntraSync Product Family -->
+            <div class="mt-12 border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                    <span class="text-gray-400 text-sm">Also from IntraSync:</span>
+                    <div class="flex flex-wrap items-center justify-center gap-6">
+                        <a href="https://intrasyncindustrial.com" class="text-gray-300 hover:text-purple-400 transition flex items-center gap-2">
+                            <i data-lucide="building-2" class="w-4 h-4"></i>
+                            <span class="font-medium">CastLogic</span>
+                            <span class="text-gray-500 text-sm">Precast ERP</span>
+                        </a>
+                        <span class="text-gray-600">|</span>
+                        <a href="https://materialslogic.intrasyncindustrial.com" class="text-gray-300 hover:text-amber-400 transition flex items-center gap-2">
+                            <i data-lucide="mountain" class="w-4 h-4"></i>
+                            <span class="font-medium">MaterialsLogic</span>
+                            <span class="text-gray-500 text-sm">Aggregates ERP</span>
+                        </a>
+                        <span class="text-gray-600">|</span>
+                        <a href="https://batchlogic.intrasyncindustrial.com" class="text-gray-300 hover:text-cyan-400 transition flex items-center gap-2">
+                            <i data-lucide="gauge" class="w-4 h-4"></i>
+                            <span class="font-medium">BatchLogic</span>
+                            <span class="text-gray-500 text-sm">Batch Control</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="mt-8 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">&copy; 2025 IntraSync Industrial. All rights reserved.</p>
+                <div class="flex gap-6 text-sm mt-4 md:mt-0">
+                    <a href="privacy.html" class="text-gray-500 hover:text-white transition">Privacy Policy</a>
+                    <a href="terms.html" class="text-gray-500 hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
