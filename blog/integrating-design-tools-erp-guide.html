@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Integrating Design Tools with ERP: A Step-by-Step Guide | DesignLogic Blog</title>
+    <meta name="description" content="Step-by-step guide to connecting Revit and Tekla to CastLogic ERP via DesignLogic. Covers plugin installation, configuration, model preparation, data mapping, first sync, validation checks, and ongoing workflow best practices.">
+
+    <link rel="canonical" href="https://designlogic.intrasyncindustrial.com/blog/integrating-design-tools-erp-guide.html">
+
+    <meta property="og:title" content="Integrating Design Tools with ERP: A Step-by-Step Guide">
+    <meta property="og:description" content="Complete walkthrough of connecting Revit and Tekla to CastLogic ERP via DesignLogic plugins, from installation to ongoing sync.">
+    <meta property="og:image" content="https://designlogic.intrasyncindustrial.com/logo.svg">
+    <meta property="og:url" content="https://designlogic.intrasyncindustrial.com/blog/integrating-design-tools-erp-guide.html">
+    <meta property="og:type" content="article">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Integrating Design Tools with ERP: A Step-by-Step Guide">
+    <meta name="twitter:description" content="Complete walkthrough of connecting Revit and Tekla to CastLogic ERP via DesignLogic plugins.">
+    <meta name="twitter:image" content="https://designlogic.intrasyncindustrial.com/logo.svg">
+
+    <meta name="keywords" content="Revit ERP integration, Tekla ERP integration, CastLogic ERP, DesignLogic plugin tutorial, BIM to ERP workflow, precast data mapping, piece mark sync, design tool integration, precast plugin installation, BIM ERP connection">
+    <meta name="author" content="IntraSync Engineering Team">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Integrating Design Tools with ERP: A Step-by-Step Guide",
+      "description": "Step-by-step guide to connecting Revit and Tekla to CastLogic ERP via DesignLogic plugins.",
+      "author": {
+        "@type": "Organization",
+        "name": "IntraSync Engineering Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "IntraSync Industrial",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://designlogic.intrasyncindustrial.com/logo.svg"
+        }
+      },
+      "datePublished": "2026-01-05",
+      "dateModified": "2026-01-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://designlogic.intrasyncindustrial.com/blog/integrating-design-tools-erp-guide.html"
+      },
+      "image": "https://designlogic.intrasyncindustrial.com/logo.svg"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(to right, #059669, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .prose h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+        .prose h3 { margin-top: 2rem; margin-bottom: 0.75rem; }
+        .prose p { margin-bottom: 1.25rem; }
+        .prose ul, .prose ol { margin-bottom: 1.25rem; }
+        .prose li { margin-bottom: 0.5rem; }
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #059669, #10b981);
+            color: white;
+            font-weight: 700;
+            font-size: 1.125rem;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-emerald-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center" aria-label="IntraSync DesignLogic Home">
+                <img src="../logo.svg" alt="IntraSync Design Logo" class="h-12 mr-3">
+                <span class="text-2xl font-bold gradient-text">DesignLogic</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../index.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Home</a>
+                <a href="../index.html#plugins" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Plugins</a>
+                <a href="../index.html#plugins" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Revit</a>
+                <a href="../index.html#plugins" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Tekla</a>
+                <a href="../blog.html" class="text-emerald-600 border-b-2 border-emerald-600 transition-colors font-medium">Blog</a>
+                <a href="../about.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">About</a>
+                <a href="../contact.html" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold px-6 py-2.5 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all transform hover:scale-105 shadow-lg">Request Demo</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden flex items-center text-gray-600 hover:text-emerald-600" aria-label="Toggle mobile menu">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-emerald-100 px-6 py-4 space-y-3">
+            <a href="../index.html" class="block text-gray-600 hover:text-emerald-600 font-medium py-2">Home</a>
+            <a href="../index.html#plugins" class="block text-gray-600 hover:text-emerald-600 font-medium py-2">Plugins</a>
+            <a href="../index.html#plugins" class="block text-gray-600 hover:text-emerald-600 font-medium py-2">Revit</a>
+            <a href="../index.html#plugins" class="block text-gray-600 hover:text-emerald-600 font-medium py-2">Tekla</a>
+            <a href="../blog.html" class="block text-emerald-600 font-medium py-2">Blog</a>
+            <a href="../about.html" class="block text-gray-600 hover:text-emerald-600 font-medium py-2">About</a>
+            <a href="../contact.html" class="block bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold px-6 py-2.5 rounded-lg text-center mt-2">Request Demo</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <nav class="bg-gray-50 border-b border-gray-200" aria-label="Breadcrumb">
+            <div class="container mx-auto px-6 py-3">
+                <ol class="flex items-center space-x-2 text-sm text-gray-500">
+                    <li><a href="../index.html" class="hover:text-emerald-600 transition-colors">Home</a></li>
+                    <li><i data-lucide="chevron-right" class="w-4 h-4"></i></li>
+                    <li><a href="../blog.html" class="hover:text-emerald-600 transition-colors">Blog</a></li>
+                    <li><i data-lucide="chevron-right" class="w-4 h-4"></i></li>
+                    <li class="text-gray-900 font-medium">Integrating Design Tools with ERP: A Step-by-Step Guide</li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Article Header -->
+        <section class="bg-gradient-to-br from-emerald-50 to-green-50 py-16">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="mb-4">
+                    <span class="inline-block bg-purple-100 text-purple-700 text-sm font-semibold px-3 py-1 rounded-full">Plugin Tutorials</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">Integrating Design Tools with ERP: A Step-by-Step Guide</h1>
+                <div class="flex flex-wrap items-center gap-4 text-gray-600 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="user" class="w-4 h-4"></i>
+                        <span>IntraSync Engineering Team</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4"></i>
+                        <time datetime="2026-01-05">January 5, 2026</time>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="clock" class="w-4 h-4"></i>
+                        <span>16 min read</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Body -->
+        <article class="py-16">
+            <div class="container mx-auto px-6 max-w-4xl prose">
+
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Connecting your BIM design tools directly to your ERP system is the single highest-impact integration a precast manufacturer can implement. When Revit or Tekla models feed piece data, reinforcement schedules, and material lists directly into CastLogic ERP, you eliminate the manual data entry that consumes engineering hours, introduces transcription errors, and delays project timelines. This guide walks you through the complete process of integrating DesignLogic plugins with your design environment and CastLogic ERP, from initial installation through your first successful sync and beyond into ongoing production workflows.
+                </p>
+
+                <h2 class="text-3xl font-bold text-gray-900">Before You Begin: Prerequisites</h2>
+
+                <p class="text-gray-700 leading-relaxed">
+                    Before starting the integration, ensure you have the following in place. Missing any of these prerequisites will cause delays during setup, so it is worth verifying each one before proceeding.
+                </p>
+
+                <ul class="text-gray-700 leading-relaxed space-y-3">
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+                        <span><strong>Supported Design Software:</strong> Autodesk Revit 2023 or later, or Tekla Structures 2023 or later, installed and licensed on your workstation. DesignLogic also supports Allplan, AutoCAD, Bentley ProStructures, and SketchUp, but this guide focuses on the Revit and Tekla workflows.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+                        <span><strong>CastLogic ERP Access:</strong> An active CastLogic ERP account with API access enabled. Your ERP administrator can provide the API endpoint URL and authentication credentials.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+                        <span><strong>DesignLogic License:</strong> A valid DesignLogic plugin license key. Contact your IntraSync account manager or email info@intrasyncindustrial.com if you need one.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+                        <span><strong>Network Access:</strong> Outbound HTTPS access on port 443 from your workstation to the CastLogic API server. If your organization uses a proxy or firewall, coordinate with your IT team to whitelist the CastLogic endpoint.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+                        <span><strong>A Test Project:</strong> A BIM model with at least 10 to 20 precast elements that you can use for initial testing. Avoid using a live production project for your first sync.</span>
+                    </li>
+                </ul>
+
+                <h2 class="text-3xl font-bold text-gray-900">Step 1: Plugin Installation</h2>
+
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mt-0 mb-2">Download and Install the DesignLogic Plugin</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Download the DesignLogic installer package from your IntraSync customer portal. The installer is a standard Windows MSI package that supports both per-user and per-machine installation. Run the installer with administrator privileges and follow the on-screen prompts. The installer will automatically detect your installed Revit or Tekla versions and install the appropriate plugin components for each one.
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed">
+                    For Revit installations, the plugin registers as an external application and adds a DesignLogic ribbon tab to the Revit interface. For Tekla, the plugin installs as an extension accessible from the Applications & Components catalog. After installation completes, launch your design application and verify that the DesignLogic tab or panel appears. If it does not, check the application's plugin/add-in manager to ensure DesignLogic is listed and enabled.
+                </p>
+
+                <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 my-8">
+                    <div class="flex items-center gap-2 mb-3">
+                        <i data-lucide="code" class="w-5 h-5 text-emerald-600"></i>
+                        <span class="font-semibold text-gray-900">Installation Paths (Default)</span>
+                    </div>
+                    <pre class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm font-mono">
+Revit Plugin Location:
+  %APPDATA%\Autodesk\Revit\Addins\[version]\DesignLogic.addin
+  C:\Program Files\IntraSync\DesignLogic\Revit\
+
+Tekla Plugin Location:
+  %APPDATA%\Tekla\Structures\[version]\Extensions\DesignLogic\
+  C:\Program Files\IntraSync\DesignLogic\Tekla\
+
+Configuration File:
+  %APPDATA%\IntraSync\DesignLogic\config.json
+
+Log Files:
+  %APPDATA%\IntraSync\DesignLogic\logs\</pre>
+                </div>
+
+                <!-- Tip Callout -->
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="info" class="w-6 h-6 text-blue-600 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Tip: Multi-Version Support</h4>
+                            <p class="text-gray-700 mb-0">If you have multiple versions of Revit or Tekla installed, DesignLogic will install plugins for all detected versions. You can manage which versions are active in the DesignLogic Configuration Manager accessible from the Windows Start menu.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold text-gray-900">Step 2: Configuration and ERP Connection</h2>
+
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mt-0 mb-2">Connect to CastLogic ERP</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Open the DesignLogic Settings panel from within your design application. Navigate to the Connection tab and enter your CastLogic ERP credentials. You will need the API endpoint URL provided by your ERP administrator (typically in the format https://yourcompany.castlogic.com/api/v2), your CastLogic username and password, and your company code if your organization uses multi-company setup.
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed">
+                    Click the Test Connection button to verify that the plugin can reach the CastLogic server and authenticate successfully. A green checkmark confirms the connection is working. If the test fails, verify your credentials, check network connectivity, and ensure your CastLogic account has the API Access permission enabled. Common connection issues include expired passwords, disabled accounts, and corporate proxy servers that block outbound HTTPS traffic.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed">
+                    Next, configure the sync preferences. The Settings panel allows you to control which data fields are synchronized, the sync direction (design to ERP, ERP to design, or bidirectional), conflict resolution rules when the same field has been modified in both systems, and automatic sync intervals or manual sync triggers. For your first integration, we recommend starting with design-to-ERP unidirectional sync with manual triggers. This gives you full control over when data flows to the ERP and allows you to verify each sync before it takes effect. Once you are confident in the data quality, you can enable bidirectional sync and automatic intervals.
+                </p>
+
+                <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 my-8">
+                    <div class="flex items-center gap-2 mb-3">
+                        <i data-lucide="code" class="w-5 h-5 text-emerald-600"></i>
+                        <span class="font-semibold text-gray-900">Configuration Example (config.json)</span>
+                    </div>
+                    <pre class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm font-mono">
+{
+  "erp_connection": {
+    "endpoint": "https://yourcompany.castlogic.com/api/v2",
+    "company_code": "PRECAST01",
+    "auth_method": "oauth2",
+    "timeout_seconds": 30
+  },
+  "sync_settings": {
+    "direction": "design_to_erp",
+    "trigger": "manual",
+    "auto_interval_minutes": 0,
+    "conflict_resolution": "design_wins",
+    "include_reinforcement": true,
+    "include_embeds": true,
+    "include_finishes": true,
+    "include_weights": true
+  },
+  "field_mapping": {
+    "piece_mark": "model.Mark",
+    "width": "model.Width",
+    "height": "model.Height",
+    "length": "model.Length",
+    "concrete_mix": "model.Material.Name",
+    "weight": "model.Weight.Calculated",
+    "volume": "model.Volume.Net"
+  }
+}</pre>
+                </div>
+
+                <h2 class="text-3xl font-bold text-gray-900">Step 3: Model Preparation</h2>
+
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mt-0 mb-2">Prepare Your BIM Model for Extraction</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            The quality of the data sync depends entirely on the quality of the BIM model. Before your first extraction, review the model to ensure it meets the minimum requirements for a clean data transfer. This preparation step is often where new users encounter the most issues, so take the time to do it thoroughly.
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed">
+                    Start by verifying piece mark assignments. Every precast element in the model must have a unique piece mark that follows your company's naming convention. DesignLogic uses the piece mark as the primary identifier for linking model elements to ERP records. Duplicate or missing marks will cause sync errors. In Revit, piece marks are typically stored in the Mark parameter of precast family instances. In Tekla, they are stored in the Part mark or Assembly mark fields depending on your workflow.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed">
+                    Next, verify material assignments. Every precast element should have a concrete material assigned that specifies the mix design, unit weight, and strength class. Elements without materials will sync with blank or default values in the ERP, requiring manual correction later. Check that material names in the model match the mix design identifiers used in your CastLogic ERP. For example, if your ERP uses "5000-NW" for 5000 psi normal weight concrete, the model material should be named identically or mapped through the DesignLogic field mapping configuration.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed">
+                    Run the DesignLogic Model Validation tool, accessible from the DesignLogic ribbon tab. This tool scans the entire model and generates a report of issues that will affect data extraction. Common issues flagged by the validator include elements with missing piece marks, elements with no material assignment, duplicate piece marks across different element types, elements with zero or negative dimensions, reinforcement not hosted to a precast element, and embeds floating outside their host element boundaries.
+                </p>
+
+                <!-- Warning Callout -->
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-6 my-8 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="alert-triangle" class="w-6 h-6 text-amber-600 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Common Pitfall: Linked Models</h4>
+                            <p class="text-gray-700 mb-0">If your precast model references linked files (such as the structural model from the engineer of record), make sure linked elements are not accidentally included in the extraction. DesignLogic extracts only from the active model by default, but elements in linked files can interfere if they share parameter names with your precast elements. Use the extraction scope settings to explicitly include or exclude linked models.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold text-gray-900">Step 4: Data Mapping</h2>
+
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mt-0 mb-2">Configure Field Mapping Between Model and ERP</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Data mapping is the process of defining which model parameters correspond to which ERP fields. DesignLogic provides a visual mapping interface that shows every extractable parameter from the model on the left and every available ERP field on the right. You connect them by drawing associations or selecting from dropdown menus.
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed">
+                    The essential field mappings that must be configured for a basic sync include piece mark, which serves as the primary record identifier in the ERP, piece dimensions including width, height, length, and thickness, concrete material or mix design identifier, piece weight calculated from geometry and unit weight, concrete volume in cubic yards, element category or type classification, and project or job number assignment.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed">
+                    Beyond the basic fields, you should map reinforcement data including rebar bar sizes, quantities, lengths, and bend types, strand patterns for prestressed members, and mesh specifications. Embed and hardware data should also be mapped, covering embed plate sizes and locations, headed stud configurations, threaded insert types and locations, lifting hardware types and capacities, and bearing pad specifications. Surface finish data rounds out the mapping, including finish types for each face, reveal patterns, form liner specifications, and exposed aggregate or sandblast areas.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed">
+                    DesignLogic includes a set of default field mappings that work for most Revit and Tekla model configurations. Review these defaults and adjust any that do not match your specific model parameter names or ERP field structure. The mapping configuration is saved per project type, so you only need to configure it once for each standard project template you use.
+                </p>
+
+                <h2 class="text-3xl font-bold text-gray-900">Step 5: First Sync</h2>
+
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="step-number">5</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mt-0 mb-2">Execute Your First Data Synchronization</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            With the plugin installed, ERP connected, model prepared, and field mappings configured, you are ready for your first sync. We recommend starting with a small subset of the model rather than syncing the entire project at once. Select 5 to 10 precast elements that represent different element types such as a wall panel, a double tee, a column, and a beam, and run the sync on just those elements.
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed">
+                    To execute a selective sync in Revit, select the elements in the model view, then click the Sync Selected button in the DesignLogic ribbon. In Tekla, use the DesignLogic panel to filter by assembly marks and sync the selected subset. The plugin will extract all mapped data from the selected elements, package it into the CastLogic API format, and transmit it to the ERP server.
+                </p>
+
+                <p class="text-gray-700 leading-relaxed">
+                    The sync process displays a progress window showing each element as it is processed. After completion, a summary report lists every element synced, the data transferred for each one, and any warnings or errors encountered. Review this report carefully for your first sync. Common first-sync issues include field mapping mismatches where a model parameter contains data in an unexpected format, unit conversion discrepancies between model units and ERP units, missing required fields in the ERP that were not mapped from the model, and character encoding issues in piece marks or descriptions that contain special characters.
+                </p>
+
+                <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 my-8">
+                    <div class="flex items-center gap-2 mb-3">
+                        <i data-lucide="code" class="w-5 h-5 text-emerald-600"></i>
+                        <span class="font-semibold text-gray-900">Sample Sync Report Output</span>
+                    </div>
+                    <pre class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm font-mono">
+DesignLogic Sync Report
+=======================
+Project: Sacramento Office Tower
+Date: 2026-01-05 14:32:18
+Direction: Design -> ERP
+Scope: Selected elements (8 of 247)
+
+SYNCED SUCCESSFULLY (7):
+  WP-101  Wall Panel    12'-0" x 30'-0" x 8"    5,400 lbs  OK
+  WP-102  Wall Panel    12'-0" x 28'-6" x 8"    5,130 lbs  OK
+  DT-201  Double Tee    10'-0" x 60'-0" x 32"   18,720 lbs OK
+  DT-202  Double Tee    10'-0" x 60'-0" x 32"   18,720 lbs OK
+  COL-01  Column        24" x 24" x 14'-0"      4,200 lbs  OK
+  BM-301  Beam          18" x 36" x 28'-0"      8,820 lbs  OK
+  SP-401  Spandrel      3'-6" x 30'-0" x 8"     6,300 lbs  OK
+
+WARNINGS (1):
+  SB-501  Stair/Beam    Missing finish spec on Face 3
+          -> Synced with default finish "Smooth Gray"
+
+ERRORS (0):
+  None
+
+Data transferred per element:
+  Dimensions, weight, volume, material, piece mark,
+  reinforcement (14 bar entries), embeds (3 entries),
+  finish specs (6 face entries), lifting hardware (2)</pre>
+                </div>
+
+                <h2 class="text-3xl font-bold text-gray-900">Step 6: Validation Checks</h2>
+
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="step-number">6</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mt-0 mb-2">Verify Data Accuracy in the ERP</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            After the first sync completes, log into CastLogic ERP and verify that the synced elements appear with correct data. This manual verification step is critical for your first integration and should not be skipped. Check each of the following data categories against the original model.
+                        </p>
+                    </div>
+                </div>
+
+                <ol class="text-gray-700 leading-relaxed space-y-3 list-decimal list-inside">
+                    <li><strong>Piece dimensions:</strong> Verify that width, height, length, and thickness in the ERP match the model geometry exactly. Pay attention to units: ensure that all dimensions are in the expected unit system (typically imperial for US producers).</li>
+                    <li><strong>Weights and volumes:</strong> Compare the ERP weight and volume values against the model's calculated values. Small rounding differences (less than 0.5 percent) are acceptable and result from unit conversion precision.</li>
+                    <li><strong>Material assignments:</strong> Confirm that each piece in the ERP has the correct concrete mix design. Verify that the mix names match your production facility's standard mix identifiers.</li>
+                    <li><strong>Reinforcement data:</strong> Check that rebar quantities, sizes, and lengths transferred correctly. For prestressed members, verify strand patterns, strand diameters, and jacking forces.</li>
+                    <li><strong>Embeds and hardware:</strong> Verify that all embed plates, studs, inserts, and lifting hardware are present in the ERP records with correct specifications.</li>
+                    <li><strong>Piece marks:</strong> Confirm that piece marks in the ERP exactly match the model, including any prefix, suffix, or numbering conventions used by your team.</li>
+                </ol>
+
+                <p class="text-gray-700 leading-relaxed">
+                    If you find discrepancies, trace them back to the source. Most first-sync issues are caused by field mapping misconfigurations that can be corrected in the DesignLogic settings. After correcting the mapping, delete the test records from the ERP and re-sync to verify the fix.
+                </p>
+
+                <h2 class="text-3xl font-bold text-gray-900">Step 7: Full Project Sync</h2>
+
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="step-number">7</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mt-0 mb-2">Sync the Complete Project</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Once you have validated the test sync and resolved any mapping issues, you are ready to sync the full project model. Click Sync All in the DesignLogic panel to extract data from every precast element in the model. For large projects with hundreds of elements, the sync may take several minutes. The progress window shows real-time status as each element is processed.
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed">
+                    After the full sync completes, review the summary report for any warnings or errors. Address any flagged issues before proceeding to use the ERP data for production planning. Run a summary comparison between the model statistics (total piece count, total concrete volume, total weight) and the ERP project totals. These should match within rounding tolerance. If you see a significant discrepancy, it usually means some elements were excluded from the sync due to missing piece marks or other validation failures.
+                </p>
+
+                <h2 class="text-3xl font-bold text-gray-900">Ongoing Workflow Best Practices</h2>
+
+                <p class="text-gray-700 leading-relaxed">
+                    With the initial integration complete, adopt these best practices to maintain data accuracy and maximize the value of the design-to-ERP connection throughout the project lifecycle.
+                </p>
+
+                <h3 class="text-2xl font-bold text-gray-900">Sync After Every Major Model Update</h3>
+
+                <p class="text-gray-700 leading-relaxed">
+                    Run a DesignLogic sync whenever the model undergoes significant changes such as design revisions, added or deleted elements, or updated reinforcement details. The plugin performs differential syncs, transferring only the data that changed since the last sync, so incremental syncs are fast even on large projects. Establish a cadence with your engineering team, such as syncing at the end of each workday or after each design milestone, to keep the ERP current.
+                </p>
+
+                <h3 class="text-2xl font-bold text-gray-900">Use Revision Tracking</h3>
+
+                <p class="text-gray-700 leading-relaxed">
+                    DesignLogic maintains a revision log that records every sync operation, including what data changed and who initiated the sync. This log is invaluable for change order documentation, audit trails, and troubleshooting. Review the revision log periodically to understand the pattern of design changes and their impact on production data.
+                </p>
+
+                <h3 class="text-2xl font-bold text-gray-900">Establish Model Quality Gates</h3>
+
+                <p class="text-gray-700 leading-relaxed">
+                    Create a model quality checklist that engineers must complete before syncing to the ERP. Include items such as all piece marks assigned and unique, all materials specified, all reinforcement hosted to elements, validation tool run with zero errors, and project manager approval for major revisions. This prevents incomplete or incorrect data from reaching the ERP and causing downstream issues in production planning, procurement, and scheduling.
+                </p>
+
+                <h3 class="text-2xl font-bold text-gray-900">Monitor Bidirectional Sync Carefully</h3>
+
+                <p class="text-gray-700 leading-relaxed">
+                    When you enable bidirectional sync (where ERP changes can flow back to the design model), exercise caution. Production status updates, schedule dates, and costing data flowing from ERP to model are generally safe. But allowing ERP users to modify piece dimensions or reinforcement and push those changes back to the model requires careful governance. Define clear rules about which fields are editable from which system, and use the conflict resolution settings to establish which system's data takes precedence when both have been modified.
+                </p>
+
+                <!-- Emerald Callout -->
+                <div class="bg-emerald-50 border-l-4 border-emerald-500 p-6 my-8 rounded-r-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="lightbulb" class="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Pro Tip: Template Projects</h4>
+                            <p class="text-gray-700 mb-0">Save your field mapping configuration, sync settings, and model preparation checklist as a DesignLogic project template. When starting a new project, load the template to apply all settings instantly. This ensures consistency across projects and eliminates the configuration overhead for each new job.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold text-gray-900">Troubleshooting Common Issues</h2>
+
+                <p class="text-gray-700 leading-relaxed">
+                    Even with careful setup, you may encounter issues during the integration process. Here are the most common problems and their solutions.
+                </p>
+
+                <ul class="text-gray-700 leading-relaxed space-y-4">
+                    <li>
+                        <strong>Connection timeout errors:</strong> If the sync times out, check your network connection and increase the timeout value in the DesignLogic configuration file. Large projects with hundreds of elements may require a timeout of 60 seconds or more. Also verify that no firewall or proxy is throttling the connection.
+                    </li>
+                    <li>
+                        <strong>Duplicate piece mark errors:</strong> The ERP will reject elements with piece marks that already exist in a different project. Ensure your piece mark naming convention includes a project prefix to guarantee uniqueness across your entire portfolio.
+                    </li>
+                    <li>
+                        <strong>Missing reinforcement data:</strong> If rebar or strand data is not appearing in the ERP after sync, verify that the reinforcement elements in the model are properly hosted to their parent precast elements. Unhosted reinforcement will not be associated with any piece during extraction.
+                    </li>
+                    <li>
+                        <strong>Weight discrepancies:</strong> If model weights do not match ERP weights, check the concrete unit weight parameter in the model material definition. A common issue is using the default Revit concrete density rather than the actual mix-specific unit weight. Normal weight concrete typically ranges from 145 to 155 pcf depending on the mix design.
+                    </li>
+                    <li>
+                        <strong>Sync performance degradation:</strong> If syncs become slow over time, check the log file size and consider archiving older logs. Also verify that the CastLogic API server is performing well by testing with a small sync operation. Network latency and ERP server load can both impact sync speed.
+                    </li>
+                </ul>
+
+                <h2 class="text-3xl font-bold text-gray-900">Conclusion</h2>
+
+                <p class="text-gray-700 leading-relaxed">
+                    Integrating your design tools with your ERP through DesignLogic is not just a technology implementation; it is a workflow transformation. When piece data flows automatically from the 3D model to production planning, you eliminate the re-entry that consumes hours, introduces errors, and delays projects. The seven steps outlined in this guide provide a proven path from installation to production-ready integration. Take the time to prepare your model, validate your first sync, and establish ongoing best practices, and the return on investment will compound with every project.
+                </p>
+
+            </div>
+        </article>
+
+        <!-- Related Articles -->
+        <section class="bg-gray-50 py-16">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="true-cost-manual-takeoffs-precast.html" class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-200">
+                        <span class="inline-block bg-purple-100 text-purple-700 text-xs font-semibold px-2 py-1 rounded-full mb-3">Workflow Automation</span>
+                        <h3 class="font-bold text-gray-900 mb-2">The True Cost of Manual Takeoffs in Precast Manufacturing</h3>
+                        <p class="text-gray-600 text-sm">Hidden costs of manual quantity takeoffs and how automated BIM-based extraction saves 60-80% of estimating time.</p>
+                    </a>
+                    <a href="precast-connection-design-digital-tools.html" class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-200">
+                        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-semibold px-2 py-1 rounded-full mb-3">Precast Engineering</span>
+                        <h3 class="font-bold text-gray-900 mb-2">Precast Connection Design: Digital Tools for Modern Engineers</h3>
+                        <p class="text-gray-600 text-sm">How digital tools automate connection design with parametric libraries and embed placement optimization.</p>
+                    </a>
+                    <a href="lod-requirements-precast-bim-models.html" class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-200">
+                        <span class="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full mb-3">BIM & Design</span>
+                        <h3 class="font-bold text-gray-900 mb-2">Level of Development (LOD) for Precast BIM Models</h3>
+                        <p class="text-gray-600 text-sm">LOD 100 through LOD 500 explained for precast concrete elements and connections.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-gradient-to-r from-emerald-600 to-emerald-700 py-16">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Ready to Modernize Your Design Workflow?</h2>
+                <p class="text-emerald-100 text-lg mb-8">See how DesignLogic connects your Revit and Tekla models directly to CastLogic ERP with zero manual data entry. Schedule a personalized demo with our integration team.</p>
+                <a href="../contact.html" class="inline-block bg-white text-emerald-700 font-bold px-10 py-4 rounded-lg text-lg hover:bg-emerald-50 transition-all transform hover:scale-105 shadow-xl">Request Demo</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="../logo.svg" alt="IntraSync Design Logo" class="h-10 mr-3">
+                        <span class="text-xl font-bold gradient-text">DesignLogic</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">Engineering plugins that connect precast design tools to the IntraSync ERP ecosystem.</p>
+                    <address class="mt-4 text-gray-400 not-italic">
+                        <p>1401 21st Street Suite R<br>Sacramento, CA 95811</p>
+                        <p class="mt-2"><a href="tel:+17076401380" class="hover:text-white">(707) 640-1380</a></p>
+                    </address>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 tracking-wider uppercase text-gray-400">Plugins</h4>
+                    <ul class="space-y-3">
+                        <li><a href="../index.html#plugins" class="text-gray-300 hover:text-white">All Plugins</a></li>
+                        <li><a href="../index.html#plugins" class="text-gray-300 hover:text-white">Revit</a></li>
+                        <li><a href="../index.html#plugins" class="text-gray-300 hover:text-white">Tekla</a></li>
+                        <li><a href="../index.html#plugins" class="text-gray-300 hover:text-white">Allplan</a></li>
+                        <li><a href="../index.html#plugins" class="text-gray-300 hover:text-white">AutoCAD</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 tracking-wider uppercase text-gray-400">ERP Modules</h4>
+                    <ul class="space-y-3">
+                        <li><a href="../accounting.html" class="text-gray-300 hover:text-white">Accounting</a></li>
+                        <li><a href="../hr.html" class="text-gray-300 hover:text-white">HR & Payroll</a></li>
+                        <li><a href="../dispatch.html" class="text-gray-300 hover:text-white">Dispatch</a></li>
+                        <li><a href="../schedule.html" class="text-gray-300 hover:text-white">Scheduling</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 tracking-wider uppercase text-gray-400">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="../about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="../blog.html" class="text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="../faq.html" class="text-gray-300 hover:text-white">FAQ</a></li>
+                        <li><a href="../contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                        <li><a href="../privacy.html" class="text-gray-300 hover:text-white">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                    <span class="text-gray-400 text-sm">Also from IntraSync:</span>
+                    <div class="flex items-center gap-6">
+                        <a href="https://intrasyncindustrial.com" class="text-gray-300 hover:text-purple-400 transition flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                            <span>CastLogic</span>
+                            <span class="text-gray-500 text-sm">Precast ERP</span>
+                        </a>
+                        <span class="text-gray-600">|</span>
+                        <a href="https://batchlogic.intrasyncindustrial.com" class="text-gray-300 hover:text-cyan-400 transition flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                            <span>BatchLogic</span>
+                            <span class="text-gray-500 text-sm">Batch Control</span>
+                        </a>
+                        <span class="text-gray-600">|</span>
+                        <a href="https://materialslogic.intrasyncindustrial.com" class="text-gray-300 hover:text-amber-400 transition flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+                            <span>MaterialsLogic</span>
+                            <span class="text-gray-500 text-sm">Aggregates ERP</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2026 IntraSync Industrial. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            mobileMenu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

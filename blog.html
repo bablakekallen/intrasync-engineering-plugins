@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Title & Meta Description -->
+    <title>Engineering Design Blog | DesignLogic - Precast BIM, Plugin Tutorials & Industry Standards</title>
+    <meta name="description" content="Explore the DesignLogic engineering blog for precast BIM best practices, plugin tutorials for Revit, Tekla, and Allplan, industry standards like IFC 4.0, and workflow automation strategies for precast concrete manufacturing.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://designlogic.intrasyncindustrial.com/blog.html">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Engineering Design Blog | DesignLogic - Precast BIM & Plugin Tutorials">
+    <meta property="og:description" content="Precast BIM best practices, plugin tutorials for Revit and Tekla, IFC 4.0 standards, and workflow automation strategies for precast concrete engineering.">
+    <meta property="og:image" content="https://designlogic.intrasyncindustrial.com/logo.svg">
+    <meta property="og:url" content="https://designlogic.intrasyncindustrial.com/blog.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Engineering Design Blog | DesignLogic">
+    <meta name="twitter:description" content="Precast BIM best practices, plugin tutorials, IFC standards, and workflow automation for precast concrete engineers.">
+    <meta name="twitter:image" content="https://designlogic.intrasyncindustrial.com/logo.svg">
+
+    <!-- Keywords -->
+    <meta name="keywords" content="precast BIM blog, Revit precast tutorial, Tekla precast guide, IFC 4.0 precast, BIM to production, precast engineering blog, shop drawing automation, precast design plugins, openBIM precast, rebar detailing automation">
+    <meta name="author" content="IntraSync Industrial">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- JSON-LD: Blog Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "DesignLogic Engineering Design Blog",
+      "description": "Precast BIM best practices, plugin tutorials, industry standards, and workflow automation strategies for precast concrete engineering.",
+      "url": "https://designlogic.intrasyncindustrial.com/blog.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "IntraSync Industrial",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://designlogic.intrasyncindustrial.com/logo.svg"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1401 21st Street Suite R",
+          "addressLocality": "Sacramento",
+          "addressRegion": "CA",
+          "postalCode": "95811",
+          "addressCountry": "US"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-707-640-1380",
+          "contactType": "Sales",
+          "email": "info@intrasyncindustrial.com"
+        }
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "BIM-to-Production: Eliminating Manual Data Entry in Precast",
+          "datePublished": "2026-02-10",
+          "description": "Learn how automated BIM-to-production pipelines eliminate manual data entry, reduce errors, and accelerate precast manufacturing workflows.",
+          "url": "https://designlogic.intrasyncindustrial.com/blog/bim-to-production-eliminating-manual-data-entry.html",
+          "author": { "@type": "Organization", "name": "IntraSync Industrial" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "IFC 4.0 for Precast: What Engineers Need to Know",
+          "datePublished": "2026-02-07",
+          "description": "A comprehensive guide to IFC 4.0 support for precast concrete, covering new entity types, property sets, and interoperability improvements.",
+          "url": "https://designlogic.intrasyncindustrial.com/blog/ifc-4-precast-what-engineers-need-to-know.html",
+          "author": { "@type": "Organization", "name": "IntraSync Industrial" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Revit vs Tekla for Precast Design: A Comparison",
+          "datePublished": "2026-02-03",
+          "description": "An objective comparison of Autodesk Revit and Tekla Structures for precast concrete design, covering modeling, detailing, and production integration.",
+          "url": "https://designlogic.intrasyncindustrial.com/blog/revit-vs-tekla-precast-design-comparison.html",
+          "author": { "@type": "Organization", "name": "IntraSync Industrial" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Automating Shop Drawings: From Hours to Minutes",
+          "datePublished": "2026-01-28",
+          "description": "Discover how automated shop drawing generation from BIM models cuts drafting time by up to 80% while improving accuracy and consistency.",
+          "url": "https://designlogic.intrasyncindustrial.com/blog/automating-shop-drawings-hours-to-minutes.html",
+          "author": { "@type": "Organization", "name": "IntraSync Industrial" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "How openBIM Standards Improve Precast Collaboration",
+          "datePublished": "2026-01-22",
+          "description": "Explore how openBIM standards like IFC and BCF enable better collaboration between architects, engineers, and precast manufacturers.",
+          "url": "https://designlogic.intrasyncindustrial.com/blog/openbim-standards-precast-collaboration.html",
+          "author": { "@type": "Organization", "name": "IntraSync Industrial" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Precast Connection Design: Digital Tools for Modern Engineers",
+          "datePublished": "2026-01-17",
+          "description": "A deep dive into digital tools for precast connection design, including parametric libraries, automated calculations, and BIM integration.",
+          "url": "https://designlogic.intrasyncindustrial.com/blog/precast-connection-design-digital-tools.html",
+          "author": { "@type": "Organization", "name": "IntraSync Industrial" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "The True Cost of Manual Takeoffs in Precast Manufacturing",
+          "datePublished": "2026-01-10",
+          "description": "Quantifying the hidden costs of manual material takeoffs in precast manufacturing and the ROI of automated BIM-based quantity extraction.",
+          "url": "https://designlogic.intrasyncindustrial.com/blog/true-cost-manual-takeoffs-precast.html",
+          "author": { "@type": "Organization", "name": "IntraSync Industrial" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Integrating Design Tools with ERP: A Step-by-Step Guide",
+          "datePublished": "2026-01-05",
+          "description": "A practical step-by-step guide to integrating BIM/CAD design tools with your precast ERP system for seamless data flow.",
+          "url": "https://designlogic.intrasyncindustrial.com/blog/integrating-design-tools-erp-guide.html",
+          "author": { "@type": "Organization", "name": "IntraSync Industrial" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Rebar Detailing Automation: Reducing Errors by 90%",
+          "datePublished": "2025-12-28",
+          "description": "How automated rebar detailing from 3D models reduces reinforcement errors by 90% and streamlines bar list generation for precast production.",
+          "url": "https://designlogic.intrasyncindustrial.com/blog/rebar-detailing-automation-reducing-errors.html",
+          "author": { "@type": "Organization", "name": "IntraSync Industrial" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Level of Development (LOD) for Precast BIM Models",
+          "datePublished": "2025-12-20",
+          "description": "Understanding LOD requirements for precast BIM models at every project phase, from conceptual design through fabrication and erection.",
+          "url": "https://designlogic.intrasyncindustrial.com/blog/lod-requirements-precast-bim-models.html",
+          "author": { "@type": "Organization", "name": "IntraSync Industrial" }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(to right, #059669, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+        }
+        .featured-card {
+            background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%);
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+        }
+        .featured-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -12px rgba(5, 150, 105, 0.35);
+        }
+        .blog-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .filter-btn {
+            transition: all 0.2s ease;
+        }
+        .filter-btn.active {
+            background: linear-gradient(to right, #059669, #10b981);
+            color: white;
+            border-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-emerald-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center" aria-label="IntraSync DesignLogic Home">
+                <img src="logo.svg" alt="IntraSync Design Logo" class="h-12 mr-3">
+                <span class="text-2xl font-bold gradient-text">DesignLogic</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Home</a>
+                <a href="index.html#plugins" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Plugins</a>
+                <a href="index.html#plugins" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Revit</a>
+                <a href="index.html#plugins" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Tekla</a>
+                <a href="blog.html" class="text-emerald-600 font-semibold border-b-2 border-emerald-600 pb-1">Blog</a>
+                <a href="about.html" class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">About</a>
+                <a href="contact.html" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold px-6 py-2.5 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all transform hover:scale-105 shadow-lg">Request Demo</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden flex items-center text-gray-600 hover:text-emerald-600" aria-label="Toggle mobile menu">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-emerald-100 px-6 py-4 space-y-3">
+            <a href="index.html" class="block text-gray-600 hover:text-emerald-600 font-medium py-2">Home</a>
+            <a href="index.html#plugins" class="block text-gray-600 hover:text-emerald-600 font-medium py-2">Plugins</a>
+            <a href="index.html#plugins" class="block text-gray-600 hover:text-emerald-600 font-medium py-2">Revit</a>
+            <a href="index.html#plugins" class="block text-gray-600 hover:text-emerald-600 font-medium py-2">Tekla</a>
+            <a href="blog.html" class="block text-emerald-600 font-semibold py-2">Blog</a>
+            <a href="about.html" class="block text-gray-600 hover:text-emerald-600 font-medium py-2">About</a>
+            <a href="contact.html" class="block bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold px-6 py-2.5 rounded-lg text-center mt-2">Request Demo</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg py-20 md:py-28">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight">
+                    Engineering <span class="gradient-text">Design Blog</span>
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-700 leading-relaxed">
+                    Insights on precast BIM best practices, plugin tutorials for Revit, Tekla, and Allplan, IFC and openBIM industry standards, and workflow automation strategies for modern precast concrete engineering.
+                </p>
+            </div>
+        </section>
+
+        <!-- Featured Articles -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center gap-3 mb-10">
+                    <i data-lucide="star" class="w-6 h-6 text-emerald-600" aria-hidden="true"></i>
+                    <h2 class="text-2xl font-extrabold text-gray-900">Featured Articles</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Featured 1 -->
+                    <a href="blog/bim-to-production-eliminating-manual-data-entry.html" class="featured-card p-8 text-white block">
+                        <span class="inline-block bg-emerald-400/20 text-emerald-200 text-xs font-semibold px-3 py-1 rounded-full mb-4">BIM &amp; Design</span>
+                        <h3 class="text-xl font-bold mb-3 leading-snug">BIM-to-Production: Eliminating Manual Data Entry in Precast</h3>
+                        <p class="text-emerald-100 text-sm leading-relaxed mb-6">Learn how automated BIM-to-production pipelines eliminate manual data entry, reduce errors, and accelerate precast manufacturing workflows.</p>
+                        <div class="flex items-center gap-4 text-emerald-200 text-sm">
+                            <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-4 h-4"></i> Feb 10, 2026</span>
+                            <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 12 min read</span>
+                        </div>
+                    </a>
+                    <!-- Featured 2 -->
+                    <a href="blog/ifc-4-precast-what-engineers-need-to-know.html" class="featured-card p-8 text-white block">
+                        <span class="inline-block bg-emerald-400/20 text-emerald-200 text-xs font-semibold px-3 py-1 rounded-full mb-4">Industry Standards</span>
+                        <h3 class="text-xl font-bold mb-3 leading-snug">IFC 4.0 for Precast: What Engineers Need to Know</h3>
+                        <p class="text-emerald-100 text-sm leading-relaxed mb-6">A comprehensive guide to IFC 4.0 support for precast concrete, covering new entity types, property sets, and interoperability improvements.</p>
+                        <div class="flex items-center gap-4 text-emerald-200 text-sm">
+                            <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-4 h-4"></i> Feb 7, 2026</span>
+                            <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 14 min read</span>
+                        </div>
+                    </a>
+                    <!-- Featured 3 -->
+                    <a href="blog/revit-vs-tekla-precast-design-comparison.html" class="featured-card p-8 text-white block">
+                        <span class="inline-block bg-emerald-400/20 text-emerald-200 text-xs font-semibold px-3 py-1 rounded-full mb-4">BIM &amp; Design</span>
+                        <h3 class="text-xl font-bold mb-3 leading-snug">Revit vs Tekla for Precast Design: A Comparison</h3>
+                        <p class="text-emerald-100 text-sm leading-relaxed mb-6">An objective comparison of Autodesk Revit and Tekla Structures for precast concrete design, covering modeling, detailing, and production integration.</p>
+                        <div class="flex items-center gap-4 text-emerald-200 text-sm">
+                            <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-4 h-4"></i> Feb 3, 2026</span>
+                            <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4"></i> 11 min read</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Filters + Blog Grid -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap gap-3 mb-12 justify-center">
+                    <button class="filter-btn active px-5 py-2.5 rounded-full border border-emerald-300 text-sm font-semibold" data-filter="all">All Posts</button>
+                    <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 text-gray-600 text-sm font-semibold hover:border-emerald-400 hover:text-emerald-600" data-filter="bim">BIM &amp; Design</button>
+                    <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 text-gray-600 text-sm font-semibold hover:border-emerald-400 hover:text-emerald-600" data-filter="tutorials">Plugin Tutorials</button>
+                    <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 text-gray-600 text-sm font-semibold hover:border-emerald-400 hover:text-emerald-600" data-filter="standards">Industry Standards</button>
+                    <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 text-gray-600 text-sm font-semibold hover:border-emerald-400 hover:text-emerald-600" data-filter="automation">Workflow Automation</button>
+                    <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 text-gray-600 text-sm font-semibold hover:border-emerald-400 hover:text-emerald-600" data-filter="engineering">Precast Engineering</button>
+                </div>
+
+                <!-- Blog Posts Grid -->
+                <div id="blog-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+                    <!-- Post 1 -->
+                    <article class="blog-card shadow-md overflow-hidden" data-category="bim">
+                        <div class="p-6">
+                            <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">BIM &amp; Design</span>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 leading-snug">
+                                <a href="blog/bim-to-production-eliminating-manual-data-entry.html" class="hover:text-emerald-600 transition-colors">BIM-to-Production: Eliminating Manual Data Entry in Precast</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">Learn how automated BIM-to-production pipelines eliminate manual data entry, reduce errors, and accelerate precast manufacturing workflows.</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500">
+                                <div class="flex items-center gap-3">
+                                    <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> Feb 10, 2026</span>
+                                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 12 min</span>
+                                </div>
+                            </div>
+                            <a href="blog/bim-to-production-eliminating-manual-data-entry.html" class="inline-block mt-4 text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors">Read More &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="blog-card shadow-md overflow-hidden" data-category="standards">
+                        <div class="p-6">
+                            <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">Industry Standards</span>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 leading-snug">
+                                <a href="blog/ifc-4-precast-what-engineers-need-to-know.html" class="hover:text-emerald-600 transition-colors">IFC 4.0 for Precast: What Engineers Need to Know</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">A comprehensive guide to IFC 4.0 support for precast concrete, covering new entity types, property sets, and interoperability improvements.</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500">
+                                <div class="flex items-center gap-3">
+                                    <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> Feb 7, 2026</span>
+                                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 14 min</span>
+                                </div>
+                            </div>
+                            <a href="blog/ifc-4-precast-what-engineers-need-to-know.html" class="inline-block mt-4 text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors">Read More &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 3 -->
+                    <article class="blog-card shadow-md overflow-hidden" data-category="bim">
+                        <div class="p-6">
+                            <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">BIM &amp; Design</span>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 leading-snug">
+                                <a href="blog/revit-vs-tekla-precast-design-comparison.html" class="hover:text-emerald-600 transition-colors">Revit vs Tekla for Precast Design: A Comparison</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">An objective comparison of Autodesk Revit and Tekla Structures for precast concrete design, covering modeling, detailing, and production integration.</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500">
+                                <div class="flex items-center gap-3">
+                                    <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> Feb 3, 2026</span>
+                                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 11 min</span>
+                                </div>
+                            </div>
+                            <a href="blog/revit-vs-tekla-precast-design-comparison.html" class="inline-block mt-4 text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors">Read More &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 4 -->
+                    <article class="blog-card shadow-md overflow-hidden" data-category="automation">
+                        <div class="p-6">
+                            <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">Workflow Automation</span>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 leading-snug">
+                                <a href="blog/automating-shop-drawings-hours-to-minutes.html" class="hover:text-emerald-600 transition-colors">Automating Shop Drawings: From Hours to Minutes</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">Discover how automated shop drawing generation from BIM models cuts drafting time by up to 80% while improving accuracy and consistency.</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500">
+                                <div class="flex items-center gap-3">
+                                    <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> Jan 28, 2026</span>
+                                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 10 min</span>
+                                </div>
+                            </div>
+                            <a href="blog/automating-shop-drawings-hours-to-minutes.html" class="inline-block mt-4 text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors">Read More &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 5 -->
+                    <article class="blog-card shadow-md overflow-hidden" data-category="standards">
+                        <div class="p-6">
+                            <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">Industry Standards</span>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 leading-snug">
+                                <a href="blog/openbim-standards-precast-collaboration.html" class="hover:text-emerald-600 transition-colors">How openBIM Standards Improve Precast Collaboration</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">Explore how openBIM standards like IFC and BCF enable better collaboration between architects, engineers, and precast manufacturers.</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500">
+                                <div class="flex items-center gap-3">
+                                    <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> Jan 22, 2026</span>
+                                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 13 min</span>
+                                </div>
+                            </div>
+                            <a href="blog/openbim-standards-precast-collaboration.html" class="inline-block mt-4 text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors">Read More &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 6 -->
+                    <article class="blog-card shadow-md overflow-hidden" data-category="engineering">
+                        <div class="p-6">
+                            <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">Precast Engineering</span>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 leading-snug">
+                                <a href="blog/precast-connection-design-digital-tools.html" class="hover:text-emerald-600 transition-colors">Precast Connection Design: Digital Tools for Modern Engineers</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">A deep dive into digital tools for precast connection design, including parametric libraries, automated calculations, and BIM integration.</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500">
+                                <div class="flex items-center gap-3">
+                                    <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> Jan 17, 2026</span>
+                                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 15 min</span>
+                                </div>
+                            </div>
+                            <a href="blog/precast-connection-design-digital-tools.html" class="inline-block mt-4 text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors">Read More &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 7 -->
+                    <article class="blog-card shadow-md overflow-hidden" data-category="automation">
+                        <div class="p-6">
+                            <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">Workflow Automation</span>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 leading-snug">
+                                <a href="blog/true-cost-manual-takeoffs-precast.html" class="hover:text-emerald-600 transition-colors">The True Cost of Manual Takeoffs in Precast Manufacturing</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">Quantifying the hidden costs of manual material takeoffs in precast manufacturing and the ROI of automated BIM-based quantity extraction.</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500">
+                                <div class="flex items-center gap-3">
+                                    <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> Jan 10, 2026</span>
+                                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 9 min</span>
+                                </div>
+                            </div>
+                            <a href="blog/true-cost-manual-takeoffs-precast.html" class="inline-block mt-4 text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors">Read More &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 8 -->
+                    <article class="blog-card shadow-md overflow-hidden" data-category="tutorials">
+                        <div class="p-6">
+                            <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">Plugin Tutorials</span>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 leading-snug">
+                                <a href="blog/integrating-design-tools-erp-guide.html" class="hover:text-emerald-600 transition-colors">Integrating Design Tools with ERP: A Step-by-Step Guide</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">A practical step-by-step guide to integrating BIM/CAD design tools with your precast ERP system for seamless data flow.</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500">
+                                <div class="flex items-center gap-3">
+                                    <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> Jan 5, 2026</span>
+                                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 16 min</span>
+                                </div>
+                            </div>
+                            <a href="blog/integrating-design-tools-erp-guide.html" class="inline-block mt-4 text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors">Read More &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 9 -->
+                    <article class="blog-card shadow-md overflow-hidden" data-category="engineering">
+                        <div class="p-6">
+                            <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">Precast Engineering</span>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 leading-snug">
+                                <a href="blog/rebar-detailing-automation-reducing-errors.html" class="hover:text-emerald-600 transition-colors">Rebar Detailing Automation: Reducing Errors by 90%</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">How automated rebar detailing from 3D models reduces reinforcement errors by 90% and streamlines bar list generation for precast production.</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500">
+                                <div class="flex items-center gap-3">
+                                    <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> Dec 28, 2025</span>
+                                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 11 min</span>
+                                </div>
+                            </div>
+                            <a href="blog/rebar-detailing-automation-reducing-errors.html" class="inline-block mt-4 text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors">Read More &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 10 -->
+                    <article class="blog-card shadow-md overflow-hidden" data-category="bim">
+                        <div class="p-6">
+                            <span class="inline-block bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">BIM &amp; Design</span>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 leading-snug">
+                                <a href="blog/lod-requirements-precast-bim-models.html" class="hover:text-emerald-600 transition-colors">Level of Development (LOD) for Precast BIM Models</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">Understanding LOD requirements for precast BIM models at every project phase, from conceptual design through fabrication and erection.</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500">
+                                <div class="flex items-center gap-3">
+                                    <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> Dec 20, 2025</span>
+                                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 14 min</span>
+                                </div>
+                            </div>
+                            <a href="blog/lod-requirements-precast-bim-models.html" class="inline-block mt-4 text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors">Read More &rarr;</a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- No results message (hidden by default) -->
+                <div id="no-results" class="hidden text-center py-16">
+                    <i data-lucide="search-x" class="w-12 h-12 text-gray-400 mx-auto mb-4"></i>
+                    <p class="text-gray-500 text-lg">No articles found in this category.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="py-16 bg-emerald-50">
+            <div class="container mx-auto px-6">
+                <div class="max-w-2xl mx-auto text-center">
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="mail" class="w-10 h-10 text-emerald-600" aria-hidden="true"></i>
+                    </div>
+                    <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Stay Up to Date</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">Get the latest articles on precast BIM, plugin updates, and engineering best practices delivered to your inbox. No spam, unsubscribe anytime.</p>
+                    <form action="https://formspree.io/f/meoknpor" method="POST" class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                        <input type="hidden" name="source" value="DesignLogic Blog Newsletter">
+                        <input type="email" name="email" required placeholder="Enter your work email" class="flex-1 px-5 py-3.5 rounded-lg border border-gray-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none text-gray-800">
+                        <button type="submit" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-bold px-8 py-3.5 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all transform hover:scale-105 shadow-lg whitespace-nowrap">Subscribe</button>
+                    </form>
+                    <p class="text-xs text-gray-500 mt-4">By subscribing, you agree to our privacy policy. We respect your inbox.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="logo.svg" alt="IntraSync Design Logo" class="h-10 mr-3">
+                        <span class="text-xl font-bold gradient-text">DesignLogic</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">Engineering plugins that connect precast design tools to the IntraSync ERP ecosystem.</p>
+                    <address class="mt-4 text-gray-400 not-italic">
+                        <p>1401 21st Street Suite R<br>Sacramento, CA 95811</p>
+                        <p class="mt-2"><a href="tel:+17076401380" class="hover:text-white">(707) 640-1380</a></p>
+                    </address>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 tracking-wider uppercase text-gray-400">Plugins</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#plugins" class="text-gray-300 hover:text-white">All Plugins</a></li>
+                        <li><a href="index.html#plugins" class="text-gray-300 hover:text-white">Revit</a></li>
+                        <li><a href="index.html#plugins" class="text-gray-300 hover:text-white">Tekla</a></li>
+                        <li><a href="index.html#plugins" class="text-gray-300 hover:text-white">Allplan</a></li>
+                        <li><a href="index.html#plugins" class="text-gray-300 hover:text-white">AutoCAD</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 tracking-wider uppercase text-gray-400">ERP Modules</h4>
+                    <ul class="space-y-3">
+                        <li><a href="accounting.html" class="text-gray-300 hover:text-white">Accounting</a></li>
+                        <li><a href="hr.html" class="text-gray-300 hover:text-white">HR & Payroll</a></li>
+                        <li><a href="dispatch.html" class="text-gray-300 hover:text-white">Dispatch</a></li>
+                        <li><a href="schedule.html" class="text-gray-300 hover:text-white">Scheduling</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 tracking-wider uppercase text-gray-400">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="faq.html" class="text-gray-300 hover:text-white">FAQ</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                        <li><a href="privacy.html" class="text-gray-300 hover:text-white">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- IntraSync Product Family -->
+            <div class="mt-12 border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                    <span class="text-gray-400 text-sm">Also from IntraSync:</span>
+                    <div class="flex items-center gap-6">
+                        <a href="https://intrasyncindustrial.com" class="text-gray-300 hover:text-purple-400 transition flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                            <span>CastLogic</span>
+                            <span class="text-gray-500 text-sm">Precast ERP</span>
+                        </a>
+                        <span class="text-gray-600">|</span>
+                        <a href="https://batchlogic.intrasyncindustrial.com" class="text-gray-300 hover:text-cyan-400 transition flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                            <span>BatchLogic</span>
+                            <span class="text-gray-500 text-sm">Batch Control</span>
+                        </a>
+                        <span class="text-gray-600">|</span>
+                        <a href="https://materialslogic.intrasyncindustrial.com" class="text-gray-300 hover:text-amber-400 transition flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+                            <span>MaterialsLogic</span>
+                            <span class="text-gray-500 text-sm">Aggregates ERP</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 IntraSync Industrial. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            mobileMenu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // Blog category filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const blogCards = document.querySelectorAll('#blog-grid article');
+        const noResults = document.getElementById('no-results');
+
+        filterButtons.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+
+                // Update active button
+                filterButtons.forEach(function(b) {
+                    b.classList.remove('active');
+                    b.classList.add('text-gray-600', 'border-gray-300');
+                });
+                this.classList.add('active');
+                this.classList.remove('text-gray-600', 'border-gray-300');
+
+                // Filter cards
+                let visibleCount = 0;
+                blogCards.forEach(function(card) {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = '';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Show/hide no results message
+                if (visibleCount === 0) {
+                    noResults.classList.remove('hidden');
+                } else {
+                    noResults.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
